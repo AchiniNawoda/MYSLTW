@@ -1,0 +1,588 @@
+{ "languages": {
+    "language": "Language",
+    "english": "English",
+    "sinhala": "සිංහල",
+    "tamil": "தமிழ்"
+  },
+ 
+  "socialLogin": {
+    "orSignInWith": "Or sign in with",
+    "googleLogin": "Google Login",
+    "facebookLogin": "Facebook Login",
+    "loading": "Loading..."
+  },
+  "login": {
+    "title": "Login",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "togglePasswordVisibility": "toggle password visibility",
+    "forgotPassword": "Forgot Password?",
+    "loginButton": "Log In",
+    "noAccountText": "Don't have an account?",
+    "signUpLink": "Sign up"
+  },"signup": {
+    "title": "Sign Up",
+    "emailOrMobile": "Email or Mobile",
+    "emailOrMobilePlaceholder": "Enter your email or mobile number",
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "togglePasswordVisibility": "toggle password visibility",
+    "signupButton": "Sign Up",
+    "error": {
+      "passwordMismatch": "Passwords do not match!",
+      "invalidInput": "Please enter a valid email or 10-digit mobile number.",
+      "registrationFailed": "Registration failed",
+      "generic": "An error occurred while registering",
+      "acceptTerms": "You must accept the Terms and Conditions to proceed"
+    },
+    "acceptTerms": {
+      "prefix": "I agree to the ",
+      "conditions": "Terms and Conditions"
+    },
+    "terms": {
+      "dialogTitle": "Terms and Conditions",
+      "content": "By signing up, you agree to our Terms and Conditions and Privacy Policy.",
+      "cancel": "Cancel",
+      "accept": "Accept"
+    }
+  }, "forgetPassword": {
+    "title": "Forgot Password?",
+    "description": "Enter your registered email address or mobile number and we will send an OTP to reset your password.",
+    "userIDLabel": "User ID",
+    "userIDPlaceholder": "Enter your email or mobile number",
+    "submitButton": "Submit",
+    "backTo": "Back to",
+    "signIn": "Sign in"
+  },
+  "Summary": "Summary",
+  "Daily Usage": "Daily Usage",
+  "Gift Data": "Gift Data",
+  "History": "History",
+  "Redeem Data": "Redeem Data",
+  "Happy Day": "Happy Day",
+  "More": "More",
+  "Main Packages": "Main Packages",
+  "Data Add-Ons": "Data Add-Ons",
+  "My Package": "My Package",
+  "VOD": "VOD",
+  "PEOTVGO": "PEOTVGO",
+  "Packages": "Packages",
+  "Call Forwarding": "Call Forwarding",
+  "Enable Detailed Report": "Enable Detailed Report",
+  "Disable Detailed Report": "Disable Detailed Report",
+  "Change Contact Information": "Change Contact Information",
+  "Change Broadband Password": "Change Broadband Password","menu": {
+    "mySLT": "MySLT",
+    "myProfile": "My Profile",
+    "manageConnections": "Manage Connections"
+  },
+ 
+  "common": {
+    "logout": "Logout"
+  },"navbar": {
+  "broadband": "Broadband",
+  "peoTV": "PEO TV",
+  "voice": "Voice",
+  "mobile": "Mobile"
+}, "My Package": "My Package",
+      "Extra GB": "Extra GB",
+      "Bonus Data": "Bonus Data",
+      "Add-Ons": "Add-Ons",
+      "Package": "Package",
+  "Status": "Status",
+  "Username": "Username",
+      "Top Picks": "Top Picks",
+      "Free Data": "Free Data",
+      "Your speed is {{status}} right now": "Your speed is {{status}} right now",
+      "{{used}} GB USED OF {{limit}} GB": "{{used}} GB USED OF {{limit}} GB",
+      "Valid Till : {{date}}": "Valid Till : {{date}}",
+      "No data available for this package": "No data available for this package",
+      "Package Upgrade": "Package Upgrade",
+      "Get Extra GB": "Get Extra GB",
+      "Get Data Add-ons": "Get Data Add-ons",
+      "Get Main Package": "Get Main Package",
+      "Watermark Logo": "Watermark Logo",
+       "Promotion": "Promotion",
+      "New Services": "New Services",
+      "Digital Life": "Digital Life",
+      "Bill": "Bill",
+      "Reload": "Reload",
+      "Hot Devices": "Hot Devices",
+      "Complaints": "Complaints",
+      "Value Added": "Value Added", 
+      "Services": "Services",
+      "Value Added Services": "Value Added Services","bill": {
+    "totalPayable": "Total Payable",
+    "forMonthEnding": "For the month ending at",
+    "lastPayment": "Last Payment",
+    "payNow": "Pay Now"
+  },
+  "common": {
+    "currency": "Rs.",
+    "on": "On"
+  },
+  "total_payable": "Total Payable",
+  "bill_history": "Bill History",
+  "bill_methods": "Bill Methods","outstandingBills": {
+    "outstanding": "Outstanding",
+    "billValue": "Bill Value",
+    "for": "for",
+    "payments": "Payments",
+    "emailNow": "Email Now",
+    "downloadEBill": "Download eBill",
+    "noBillingHistory": "No billing history available.",
+    "downloadSuccess": "eBill downloaded successfully!",
+    "noBillFound": "Sorry, you have no bill received for the given month.",
+    "downloadError": "An error occurred while downloading the eBill.",
+    "noEmail": "No email address available.",
+    "emailSent": "Email sent successfully!",
+    "emailProcessing": "Sorry, Your bill is still processing.",
+    "emailError": "An error occurred while sending the email.",
+    "dialogTitle": "Notification",
+    "close": "Close"
+  }, "billMethod": {
+    "noPrivilegeTitle": "No privilege",
+    "noPrivilegeMessage": "You do not have permission to change the bill method",
+    "currentBillMethod": "Current Bill Method",
+    "otherMethods": "Other Methods",
+    "getBillVia": "Get your bill via {{method}}",
+    "agreeTerms": "I agree to the general terms and conditions",
+    "submit": "Submit",
+    "edit": "Edit",
+    "notificationTitle": "Notification",
+    "close": "Close"
+  }, "Balance": "Balance",
+  "Total Payable": "Total Payable",
+  "Expires on ": "Expires on ",
+  "For month Ending at ": "For month Ending at ",
+  "N/A": "N/A",
+  "Transaction": "Transaction",
+  "Pay Now": "Pay Now","Daily Usage": "Daily Usage",
+  "Current Month": "Current Month",
+  "Loading data...": "Loading data...",
+  "Base Package": "Base Package",
+  "Extra GB": "Extra GB",
+  "Loyalty": "Loyalty",
+  "VAS": "VAS",
+  "Date": "Date",
+  "Total Usage": "Total Usage",
+  "Usage": "Usage",
+  "Report": "Report",
+  "No Usage": "No Usage",
+  "View": "View",
+  "No data available": "No data available","Enter the username of the person to whom you wish to Gift Data": "Enter the username of the person to whom you wish to Gift Data",
+  "Select the package by tapping VALIDATE RECEIVER": "Select the package by tapping VALIDATE RECEIVER",
+  "Receiver's username :": "Receiver's username :",
+  "Validate Receiver": "Validate Receiver",
+  "Ensure the username is correct, as this transaction cannot be reversed.": "Ensure the username is correct, as this transaction cannot be reversed.",
+  "Subscriber ID or username is missing. Please provide both.": "Subscriber ID or username is missing. Please provide both.",
+  "Receiver Validate Success": "Receiver Validate Success",
+  "Subscriber ID you entered is Invalid – Please enter a correct Subscriber ID.": "Subscriber ID you entered is Invalid – Please enter a correct Subscriber ID.",
+  "Unexpected error occurred during the API call.": "Unexpected error occurred during the API call.",
+  "An error occurred during validation.": "An error occurred during validation.",
+  "Success": "Success",
+  "Error": "Error",
+  "Ok": "Ok","redeem": {
+    "enterPromoCode": "Enter the promo code on the voucher to avail yourself of the offer.",
+    "enterVoucherIdLabel": "Enter your voucher ID:",
+    "enterVoucherId": "Please enter a voucher ID.",
+    "serviceIdMissing": "Service ID is missing. Unable to redeem voucher.",
+    "successMessage": "Voucher redeemed successfully!",
+    "failureMessage": "Failed to redeem voucher. Please try again.",
+    "unexpectedError": "An unexpected error occurred. Please try again.",
+    "processing": "Processing...",
+    "redeemVoucher": "REDEEM VOUCHER",
+    "success": "Success",
+    "error": "Error",
+    "ok": "Ok",
+    "redeemIconAlt": "Redeem Icon",
+    "successGifAlt": "Success",
+    "errorGifAlt": "Error",
+    "watermarkLogoAlt": "Watermark Logo"
+  }, "happyDay": {
+    "chooseMessage1": "Choose your Happy Day and enjoy",
+    "chooseMessage2": "Unlimited Data, FREE",
+    "chooseMessage3": "for the entire day.",
+    "setDate": "Set Date",
+    "termsConditions": "Terms & Conditions",
+    "term1": "• Select any day and enjoy Free data for 24 hours.",
+    "term2": "• You can change the date as your requirement, one day prior to the selected date.",
+    "success": "Success",
+    "error": "Error",
+    "ok": "Ok",
+    "missingServiceIdOrDate": "Service ID or date is missing. Please select a valid date."
+  },
+
+  "package": {
+    "currentPackage": "Current Package",
+    "standard": "Standard",
+    "free": "Free",
+    "tax": "Tax",
+    "perMonth": "Per Month",
+    "upgrade": "Upgrade",
+    "gb": "GB",
+     "any": "Any",
+      "unlimited": "Unlimited"
+  },
+  "comm": {
+    "currency": "Rs.",
+    "gb": "GB"
+  },
+"commo": {
+  "logout": "Logout"
+},"purchaseHistory": {
+    "title": "Purchase History",
+    "tabs": {
+      "all": "All",
+      "extraGB": "Extra GB",
+      "addOns": "Add-Ons"
+    },
+    "errors": {
+      "dateRangeRequired": "Please select both date ranges",
+      "subscriberNotFound": "Subscriber ID not found.",
+      "invalidDateRange": "Invalid date range: 'From' date cannot be later than 'To' date.",
+      "fetchFailed": "Failed to fetch purchase history. Please try again."
+    },
+    "showingResults": "Showing results from {{from}} to {{to}}",
+    "viewModes": {
+      "summary": "Summary View",
+      "detailed": "Detailed View"
+    },
+    "noResults": "No purchase history found in the selected range.",
+    "tableHeaders": {
+      "type": "Package Type",
+      "name": "Package Name",
+      "validTill": "Valid Till",
+      "price": "Price"
+    }
+  },
+  
+    "from": "From",
+    "to": "To",
+    "search": "Search",
+    "type": "Type",
+    "validTill": "Valid Till",
+    "unknownPackage": "Unknown Package",
+    "notAvailable": "N/A",
+    "currency": "Rs.",
+    "watermarkAlt": "Watermark Logo"
+  ,
+  "extra_gb": {
+    "price_plan": "Price Plan",
+    "range_1_to_3": "1GB to 3GB",
+    "range_5_to_19": "5GB to 19GB",
+    "range_20_to_49": "20GB to 49GB",
+    "range_above_50": "Above 50GB",
+    "currency_per_gb": "LKR/GB",
+    "price_format": "Rs. {{price}} + Tax",
+    "add_to_bill": "Add to Bill",
+    "pay_now": "Pay Now",
+    "terms_agreement": "I agree to the",
+    "terms_conditions": "General Terms and Conditions",
+    "submit_button": "Submit",
+    "error_title": "Error",
+    "success_title": "Success",
+    "close_button": "Close",
+    "validation_error": "Please select all required options",
+    "bill_add_error": "Failed to add to bill",
+    "bill_add_success": "Package added to your bill successfully",
+    "generic_error": "An unexpected error occurred",
+    "no_packages_error": "No package options available",
+    "fetch_error": "Failed to load package options",
+    "terms":{
+  "terms_agreement": "By purchasing additional data,you agree to our",
+  "terms_conditions": "Terms and Conditions",
+  "cancel_button": "Cancel",
+  "accept_button": "Accept"
+}
+
+
+  },
+   "addons": {
+    "price_format": "Rs. {{price}}",
+    "activate_button": "Activate",
+    "confirm_title": "Confirm",
+    "confirm_message": "Do you want to purchase and activate {{packageName}}?",
+    "one_time_option": "One-Time",
+    "recurrent_option": "Recurrent",
+    "no_button": "No",
+    "yes_button": "Yes"
+  },"broadband_nav": {
+    "my_package": "My Package",
+    "data": "Data",
+    "voice": "Voice",
+    "sms": "SMS",
+    "lms": "LMS",
+    "home_schooling_wfh": "Home Schooling & WFH",
+    "usage_format": "{{used}} used from {{limit}} GB",
+    "not_available": "N/A"
+  }, "My Profile": "My Profile",
+  "You are logged in as a EasyLogin": "You are logged in as a EasyLogin",
+  "Enter Your Mobile": "Enter Your Mobile",
+  "Name": "Name",
+  "Update": "Update",
+  "Confirm Deletion": "Confirm Deletion",
+  "Are you sure you want to delete your profile? This action cannot be undone.": "Are you sure you want to delete your profile? This action cannot be undone.",
+  "No": "No",
+  "Yes": "Yes",
+  "Profile successfully terminated.": "Profile successfully terminated.",
+  "Failed to terminate the profile.": "Failed to terminate the profile.","no_peo_tv_connection": "No PEO TV Connection",
+  "no_peo_tv_message": "Seems like you don't have a PEO TV connection. Let's request one!",
+  "close": "Close",
+  "request_now": "Request Now",
+  "service_id": "Service ID",
+  "status": "Status",
+  "no_data": "No Data to Show","callForwarding": {
+    "title": "Call Forwarding",
+    "yourNumber": "Your Number",
+    "forwardingNumber": "Forwarding Number",
+    "enterPlaceholder": "Enter forwarding number",
+    "terms": "I agree to the general terms and conditions",
+    "subscribe": "Subscribe",
+    "statusFailed": "Call forwarding status failed",
+    "statusSuccess": "Call forwarding status Request Success",
+    "unknownStatus": "Unknown status received from API",
+    "apiUnavailable": "Sorry, the service is temporarily unavailable. Please try again later",
+    "enterNumber": "Please enter a forwarding number.",
+    "activated": "Call forwarding has been successfully activated.",
+    "cancelled": "Call forwarding has been successfully canceled.",
+    "failedRequest": "Failed to process the request.",
+    "serviceFine": "Service is working fine.",
+    "ok": "Ok"
+  },"loginOrSignup": {
+    "login": "Log In",
+    "signup": "Sign Up",
+    "loginImageAlt": "Login Illustration"
+  },"packageActivation": {
+    "fetchError": "Failed to fetch packages: {{error}}",
+    "validity": "Validity",
+    "activateNow": "Activate Now",
+    "confirmTitle": "Confirm Package Activation",
+    "confirmMessage": "You're about to activate:",
+    "details": "Details",
+    "confirmButton": "Confirm Activation"
+  },
+  "com": {
+    "gb": "GB",
+    "rs": "Rs.",
+    "withTax": "With Tax",
+    "days": "Days",
+    "cancel": "Cancel"
+  },
+  "me": {
+    "dataAddOns": "Data Add-Ons"
+  },"packages": {
+    "mainMenu": "Main Packages",
+    "errors": {
+      "fetchFailed": "Failed to fetch packages: {error}"
+    },
+    "validity": "Validity",
+    "activateNow": "Activate Now",
+    "confirmActivation": "Confirm Package Activation",
+    "activateConfirmation": "You're about to activate:",
+    "details": "Details",
+    "confirmButton": "Confirm Activation"
+  },
+  "co": {
+    "currency": "Rs.",
+    "withTax": "With Tax",
+    "days": "Days",
+    "cancel": "Cancel"
+  },  "broadband": {
+    "status": "Status",
+    "username": "Username",
+    "dataUsage": "{{used}} GB USED OF {{total}} GB",
+    "validTill": "Valid Till",
+    "noData": "No Data to Show",
+    "mainPackage": "Main Package",
+    "dataAddons": "Data Add-ons",
+    "getMainPackage": "Get Main Package",
+    "getDataAddons": "Get Data Add-ons",
+    "loading": "Loading...",
+    "watermarkAlt": "Watermark Logo"
+  },"transactions": {
+    "title": "Transactions History",
+    "from": "From:",
+    "to": "To:",
+    "search": "Search",
+    "searching": "Searching...",
+    "error_loading": "Failed to load transaction history. Please try again later.",
+    "no_results": "No transactions found for the selected period",
+    "invalid_date": "From date cannot be after to date",
+    "table": {
+      "date": "Date",
+      "time": "Time",
+      "status": "Status",
+      "amount": "Amount",
+      "success": "Success",
+      "failed": "Failed"
+    }
+  },"vod": {
+    "noServiceTitle": "No Video On Demand Service",
+    "noServiceMessage": "You don't have a VOD service subscription. Subscribe now!",
+    "subscribeNow": "Subscribe Now",
+    "serviceID": "Service ID",
+    "status": "Status",
+    "noVideos": "No Videos Available"
+  },
+  "c": {
+    "close": "Close"
+  },"usage": {
+    "title": " Usage Details ",
+    "basePackage": "Base Package",
+    "extraGB": "Extra GB",
+    "loyalty": "Loyalty",
+    "vas": "VAS",
+    "totalUsage": "Total Usage - {{amount}}{{unit}}",
+    "noData": "No data",
+    "legend": {
+      "pd": "PD - Peak Download",
+      "pu": "PU - Peak Upload",
+      "od": "OD - Off Peak Download",
+      "ou": "OU - Off Peak Upload"
+    }
+  },"dailyUsage": {
+    "title": "Daily Usage",
+    "currentMonth": "Current Month",
+    "lastMonth": "Last Month",
+    "twoMonthsAgo": "Two Months Ago",
+    "fetchError": "Error fetching daily usage data:",
+    "basePackage": "Base Package",
+    "extraGB": "Extra GB",
+    "loyalty": "Loyalty",
+    "vas": "VAS",
+    "date": "Date",
+    "totalUsage": "Total Usage",
+    "usage": "Usage",
+    "report": "Report",
+    "viewDetailedUsage": "View Detailed Usage"
+  },
+  "comu": {
+    "loading": "Loading data...",
+    "inGB": "in GB",
+    "noData": "No data",
+    "noDataAvailable": "No data available",
+    "more": "More",
+    "view": "View", "detailedUsageDetails": "Detailed Usage Details",
+    "protocolReport": "Protocol Report",
+    "subscription": "Subscription"
+  }, "changeContactInfo": "Change Contact Information",
+  "fullName": "Full Name",
+  "emailAddress": "Email Address",
+  "mobile": "Mobile",
+  "submit": "Submit",
+  "notification": "Notification",
+  "fillAllFields": "Please fill all the fields correctly",
+  "updateSuccess": "Contact updated successfully",
+  "updateFailed": "Failed to update contact. Please try again.",
+  "updateError": "Error during contact update. Please try again.",
+  "ok": "OK","unsubscribeTitle": " Unsubscribe for detailed reports ",
+  "unsubscribeText": "Unsubscribe to usage report",
+  "submit": "Submit","changePasswordTitle": "Change Broadband Password",
+  "currentPassword": "Current Password",
+  "newPassword": "New Password",
+  "confirmPassword": "Confirm Password",
+  "updatePassword": "Update Password", "on": "On",  "go": "Go","promotion_title": " Promotion ",
+  "loading_promotions": "Loading promotions...",
+  "error_fetching_promotions": "Failed to fetch promotions.",
+  "no_promotions": "This Number has no promotions available.",
+  "activated": "Activated",
+  "activate": "Activate",
+  "promotion_activation": "Promotion Activation",
+  "close": "Close", "detailedUsage": {
+    "title": "Usage Details",
+    "basePackage": "Base Package",
+    "extraGB": "Extra GB",
+    "loyalty": "Loyalty",
+    "vas": "VAS",
+    "totalUsage": "Total Usage",
+    "noData": "No data",
+    "pd": "PD - Peak Download",
+    "pu": "PU - Peak Upload",
+    "od": "OD - Off Peak Download",
+    "ou": "OU - Off Peak Upload"
+  },"protocol": {
+  "total": "Total",
+  "download": "Download",
+  "upload": "Upload",
+  "dateUsage": "Data Usage for Date"
+}, 
+"fiberRequest": {
+    "title": "SLT FIBRE HOME LINE"
+  },
+   "newServices": {
+    "title": "New Services",
+    "fibre": "Fibre",
+    "megaline": "Megaline",
+    "4glte": "4G LTE"
+  },
+   "firstName": "First Name",
+  "lastName": "Last Name",
+  "nic": "NIC",
+  "mobileNumber": "Mobile Number",
+  "submit": "Submit",
+  "success": "Success",
+  "error": "Error",
+  "newConnectionCreated": "New Connection Created Successfully!",
+  "unexpectedError": "An unexpected error occurred.", "requestNow": "Request Now",
+  "fiberOnTheWay": "Fibre is on the way", "currentMonth": "Current Month",
+  "dailyUsage": "Daily Usage",
+  "loadingData": "Loading data...",
+  "basePackage": "Base Package",
+  "extraGB": "Extra GB",
+  "loyalty": "Loyalty",
+  "vas": "VAS",
+  "date": "Date",
+  "totalUsage": "Total Usage",
+  "usage": "Usage",
+  "report": "Report",
+  "viewDetailedUsage": "View Detailed Usage",
+  "noData": "No data",
+  "more": "More",
+  "view": "View",
+  "noDataAvailable": "No data available","complaints": {
+    "title": "Complaints",
+    "noFaultsFound": "No Faults Found.",
+    "failedToFetch": "Failed to fetch fault list.",
+    "failedToFetchTryAgain": "Failed to fetch fault list. Please try again.",
+    "serviceName": "Service Name",
+    "faultRef": "Fault Ref",
+    "status": "Status",
+    "date": "Date",
+    "submitButton": "SUBMIT YOUR COMPLAINT"
+  },
+  "common": {
+    "loading": "Loading..."
+  }, "addComplaints": {
+    "title": "Submit Complaint",
+    "serviceType": "Service Type",
+    "contactNumber": "Contact Number",
+    "description": "Complaint Description",
+    "location": "Enter Location",
+    "all": "All",
+    "broadband": "Broadband",
+    "peotv": "PeoTV",
+    "voice": "Voice",
+    "submit": "Submit",
+    "success": "Success",
+    "error": "Error",
+    "ok": "Ok",
+    "validationError": "Please fill in all required fields.",
+    "submitSuccess": "Complaint submitted successfully!",
+    "submitFailure": "An unexpected error occurred."
+  }, "currency": "Rs."
+ 
+
+
+
+  
+
+
+
+}

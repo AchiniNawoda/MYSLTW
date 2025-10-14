@@ -1,0 +1,6 @@
+projectKey=mysltwebportal
+serverUrl=http://localhost:9000
+serverVersion=25.5.0.107428
+dashboardUrl=http://localhost:9000/dashboard?id=mysltwebportal
+ceTaskId=bc26052b-3974-4b6c-9544-efef1a69e312
+ceTaskUrl=http://localhost:9000/api/ce/task?id=bc26052b-3974-4b6c-9544-efef1a69e312

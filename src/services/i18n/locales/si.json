@@ -1,0 +1,609 @@
+{ "languages": {
+    "language": "Language",
+    "english": "English",
+    "sinhala": "සිංහල",
+    "tamil": "தமிழ்"
+  },
+   "socialLogin": {
+    "orSignInWith": "හෝ පහත ආකාරයෙන් ඇතුල් වන්න",
+    "googleLogin": "ගූගල් ඇතුල්වීම",
+    "facebookLogin": "ෆේස්බුක් ඇතුල්වීම",
+    "loading": "පූරණය වෙමින්..."
+  },
+  "login": {
+    "title": "පුරනය වන්න",
+    "emailLabel": "ඊමේල්",
+    "emailPlaceholder": "ඔබගේ ඊමේල් ඇතුලත් කරන්න",
+    "passwordLabel": "මුරපදය",
+    "passwordPlaceholder": "ඔබගේ මුරපදය ඇතුලත් කරන්න",
+    "togglePasswordVisibility": "මුරපදය පෙන්වන්න/සඟවන්න",
+    "forgotPassword": "මුරපදය අමතක වුණා ද?",
+    "loginButton": "පුරනය වන්න",
+    "noAccountText": "ගිණුමක් නැතිද?",
+    "signUpLink": "ලියාපදිංචි වන්න"
+  }, "signup": {
+    "title": "ලියාපදිංචි වන්න",
+    "emailOrMobile": "ඊමේල් හෝ ජංගම දුරකථන අංකය",
+    "emailOrMobilePlaceholder": "ඔබගේ ඊමේල් හෝ ජංගම අංකය ඇතුලත් කරන්න",
+    "name": "නම",
+    "namePlaceholder": "ඔබගේ නම ඇතුලත් කරන්න",
+    "password": "මුරපදය",
+    "passwordPlaceholder": "ඔබගේ මුරපදය ඇතුලත් කරන්න",
+    "confirmPassword": "මුරපදය තහවුරු කරන්න",
+    "confirmPasswordPlaceholder": "ඔබගේ මුරපදය නැවත ඇතුලත් කරන්න",
+    "togglePasswordVisibility": "මුරපදය පෙන්වන්න/සඟවන්න",
+    "signupButton": "ලියාපදිංචි වන්න",
+    "error": {
+      "passwordMismatch": "මුරපද නොගැලපේ!",
+      "invalidInput": "වලංගු ඊමේල් හෝ ඉලක්කම් 10ක දුරකථන අංකය ඇතුලත් කරන්න.",
+      "registrationFailed": "ලියාපදිංචිය අසාර්ථකයි",
+      "generic": "ලියාපදිංචිය කිරීමේදී දෝෂයක් ඇතිවිය"
+    }
+  },"forgetPassword": {
+    "title": "මුරපදය අමතක වුණාද?",
+    "description": "ඔබේ ලියාපදිංචි කර ඇති විද්‍යුත් තැපැල් ලිපිනය හෝ ජංගම දුරකථන අංකය ඇතුළත් කරන්න, මුරපදය නැවත සකසීමට OTP එකක් යවනු ලැබේ.",
+    "userIDLabel": "පරිශීලක හැඳුනුම්පත",
+    "userIDPlaceholder": "ඔබේ විද්‍යුත් තැපැල් හෝ ජංගම අංකය ඇතුළත් කරන්න",
+    "submitButton": "ඉදිරිපත් කරන්න",
+    "backTo": "ආපසු යන්න",
+    "signIn": "ඇතුල් වන්න"
+  },"Summary": "සාරාංශය",
+  "Daily Usage": "දිනපතා භාවිතය",
+  "Gift Data": "තෑගි දත්ත",
+  "History": "අතීතය",
+  "Redeem Data": "දත්ත ලබාගන්න",
+  "Happy Day": "සතුටු දිනය",
+  "More": "තවත්",
+  "Main Packages": "ප්‍රධාන පැකේජ",
+  "Data Add-Ons": "දත්ත ඇඩ්-ඔන්",
+  "My Package": "මගේ පැකේජය",
+  "VOD": "වීඩියෝ ඔන් ඩිමෑන්ඩ්",
+  "PEOTVGO": "PEOTVGO",
+  "Packages": "පැකේජ",
+  "Call Forwarding": "ඇමතුම් යොමු කිරීම",
+  "Enable Detailed Report": "විස්තරාත්මක වාර්තාව සක්‍රිය කරන්න",
+  "Disable Detailed Report": "විස්තරාත්මක වාර්තාව අක්‍රිය කරන්න",
+  "Change Contact Information": "සම්බන්ධතා තොරතුරු වෙනස් කරන්න",
+  "Change Broadband Password": "බ්රෝඩ්බැන්ඩ් මුරපදය වෙනස් කරන්න", "menu": {
+    "mySLT": "මයිSLT",
+    "myProfile": "මගේ පැතිකඩ",
+    "manageConnections": "සම්බන්ධතා කළමනාකරණය"
+  },
+  "common": {
+    "logout": "පිටවීම"
+  },"navbar": {
+    "broadband": "බ්‍රෝඩ්බෑන්ඩ්",
+    "peoTV": "PEO ටීවි",
+    "voice": "හඬ",
+    "mobile": "ජංගම"
+  },"My Package": "මගේ පැකේජය",
+      "Extra GB": "අතිරේක GB",
+      "Bonus Data": "බෝනස් දත්ත",
+      "Add-Ons": "අතිරේක",
+      "Free Data": "නොමිලේ දත්ත",
+      "Your speed is {{status}} right now": "ඔබේ වේගය දැන් {{status}} ය",
+      "{{used}} GB USED OF {{limit}} GB": "{{used}} GB භාවිතා කර ඇත {{limit}} GB න්",
+      "Valid Till : {{date}}": "වලංගු වන්නේ : {{date}} දක්වා",
+      "No data available for this package": "මෙම පැකේජය සඳහා දත්ත නොමැත",
+      "Package Upgrade": "පැකේජය උසස් කරන්න",
+      "Package": "පැකේජ් එක",
+  "Status": "තත්ත්වය",
+  "Username": "පරිශීලක නාමය",
+      "Top Picks": "ඉහළ තේරීම්",
+      "Get Extra GB": "අතිරේක GB ගන්න",
+      "Get Data Add-ons": "දත්ත අතිරේක ගන්න",
+      "Get Main Package": "ප්‍රධාන පැකේජය ගන්න",
+      "Watermark Logo": "වෝටර්මාර්ක් ලාංඡනය", "Promotion": "විකල්ප",
+      "New Services": "නව සේවා",
+      "Digital Life": "ඩිජිටල් ජීවිතය",
+      "Bill": "බිල්පත",
+      "Reload": "නැවත පූරණය",
+      "Hot Devices": "උණුසුම් උපාංග",
+      "LifeStore": "ලයිෆ් ස්ටෝර්",
+      "Complaints": "පැමිණිලි",
+  "Value Added": "අතිරේක වටිනාකම්",
+  "Services": "සේවා",
+      "Value Added Services": "අතිරේක වටිනාකම් සහිත සේවා", "bill": {
+    "totalPayable": "සම්පූර්ණ ගෙවිය යුතු මුදල",
+    "forMonthEnding": "මාසය අවසන් වන දිනය",
+    "lastPayment": "අවසන් ගෙවීම",
+    "payNow": "දැන් ගෙවන්න"
+  },
+  "common": {
+    "currency": "රු.",
+    "on": "දිනය"
+  },"total_payable": "මුළු ගෙවිය යුතු මුදල",
+  "bill_history": "බිල් ඉතිහාසය",
+  "bill_methods": "බිල් ගෙවීම් ක්‍රම", "outstandingBills": {
+    "outstanding": "අවශ්‍ය ශේෂය",
+    "billValue": "බිල්පත් වටිනාකම",
+    "for": "සඳහා",
+    "payments": "ගෙවීම්",
+    "emailNow": "දැන් ඊමේල් කරන්න",
+    "downloadEBill": "ඊබිල්පත බාගන්න",
+    "noBillingHistory": "බිල් ඉතිහාසය නොමැත.",
+    "downloadSuccess": "ඊබිල්පත සාර්ථකව බාගත්තා!",
+    "noBillFound": "සමාවන්න, දක්වා ඇති මාසය සඳහා ඔබට බිල්පතක් නොමැත.",
+    "downloadError": "ඊබිල්පත බාගන්නා අතර දෝෂයක් සිදු විය.",
+    "noEmail": "ඊමේල් ලිපිනය නොමැත.",
+    "emailSent": "ඊමේල් සාර්ථකව යවා ඇත!",
+    "emailProcessing": "සමාවන්න, ඔබගේ බිල්පත තවම ක්‍රියාවලියේ ඇත.",
+    "emailError": "ඊමේල් යැවීමේදී දෝෂයක් සිදු විය.",
+    "dialogTitle": "දැනුම්දීම",
+    "close": "වසා දමන්න"
+  },"billMethod": {
+    "noPrivilegeTitle": "අවසර නැත",
+    "noPrivilegeMessage": "ඔබට බිල්පත් ක්‍රමය වෙනස් කිරීමට අවසර නොමැත",
+    "currentBillMethod": "වත්මන් බිල්පත් ක්‍රමය",
+    "otherMethods": "වෙනත් ක්‍රම",
+    "getBillVia": "{{method}} මඟින් ඔබගේ බිල්පත ලබා ගන්න",
+    "agreeTerms": "මම පොදු නියම සහ කොන්දේසි පිළිගනිමි",
+    "submit": "ඉදිරිපත් කරන්න",
+    "edit": "සංස්කරණය කරන්න",
+    "notificationTitle": "දැනුම්දීම",
+    "close": "වසා දමන්න"
+  }, "Balance": "ශේෂය",
+  "Total Payable": "මුළු ගෙවිය යුතු මුදල",
+  "Expires on ": "කල් ඉකුත්වන දිනය ",
+  "For month Ending at ": "මාසය අවසන් වන දිනය ",
+  "N/A": "ලබා ගත නොහැක",
+  "Transaction": "ගනුදෙනුව",
+  "Pay Now": "දැන් ගෙවන්න", "Daily Usage": "දෛනික භාවිතය",
+  "Current Month": "වත්මන් මාසය",
+  "Loading data...": "දත්ත බාගත වෙමින් පවතී...",
+  "Base Package": "මූලික පැකේජය",
+  "Extra GB": "අතිරික්ත GB",
+  "Loyalty": "විශ්වාසභාවය",
+  "VAS": "සේවා",
+  "Date": "දිනය",
+  "Total Usage": "සම්පූර්ණ භාවිතය",
+  "Usage": "භාවිතය",
+  "Report": "වාර්තාව",
+  "No Usage": "භාවිතයක් නැත",
+  "View": "දැක්ම",
+  "No data available": "දත්ත නොමැත", "Enter the username of the person to whom you wish to Gift Data": "ඔබ දත්ත හෙළිදරව් කිරීමට කැමති පුද්ගලයාගේ පරිශීලක නාමය ඇතුළත් කරන්න",
+  "Select the package by tapping VALIDATE RECEIVER": "සත්‍යාපනය කරන්න බොත්තම ඔබා පැකේජය තෝරන්න",
+  "Receiver's username :": "ලැබුණු පරිශීලක නාමය :",
+  "Validate Receiver": "ලැබුණු පරිශීලකයා සත්‍යාපනය කරන්න",
+  "Ensure the username is correct, as this transaction cannot be reversed.": "පරිශීලක නාමය නිවැරදි බවට සහතික වන්න, මෙම ගනුදෙනුව ආපසු හැරවිය නොහැක.",
+  "Subscriber ID or username is missing. Please provide both.": "දායක හැඳුනුම් අංකය හෝ පරිශීලක නාමය නොමැත. කරුණාකර දෙකම ලබා දෙන්න.",
+  "Receiver Validate Success": "ලැබුණු පරිශීලකයා සාර්ථකව සත්‍යාපිතයි",
+  "Subscriber ID you entered is Invalid – Please enter a correct Subscriber ID.": "ඔබ ඇතුළත් කළ දායක හැඳුනුම් අංකය වලංගු නොවේ – කරුණාකර නිවැරදි දායක හැඳුනුම් අංකයක් ඇතුළත් කරන්න.",
+  "Unexpected error occurred during the API call.": "API අමතා ඇති අපේක්ෂිත නොවන දෝෂයකි.",
+  "An error occurred during validation.": "සත්‍යාපනය කිරීමේදී දෝෂයක් සිදු විය.",
+  "Success": "සාර්ථකයි",
+  "Error": "දෝෂය",
+  "Ok": "හරි", "redeem": {
+    "enterPromoCode": "පුවත්පත් කූපනයේ පෝස්ට් කේතය ඇතුළත් කරන්න.",
+    "enterVoucherIdLabel": "ඔබේ වවුචර් හැඳුනුම්පත ඇතුළත් කරන්න:",
+    "enterVoucherId": "කරුණාකර වවුචර් හැඳුනුම්පතක් ඇතුළත් කරන්න.",
+    "serviceIdMissing": "සේවා හැඳුනුම්පත නැත. වවුචර් ප්‍රමාද කිරීමට නොහැක.",
+    "successMessage": "වවුචර් සාර්ථකව ප්‍රමාද කරන ලදී!",
+    "failureMessage": "වවුචර් ප්‍රමාද කිරීම අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න.",
+    "unexpectedError": "අපේක්ෂිත නොකළ දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+    "processing": "ක්‍රියාත්මක වෙමින් පවතී...",
+    "redeemVoucher": "වවුචර් ප්‍රමාද කරන්න",
+    "success": "සාර්ථකයි",
+    "error": "දෝෂය",
+    "ok": "හරි",
+    "redeemIconAlt": "වවුචර් ප්‍රමාද සලකුණ",
+    "successGifAlt": "සාර්ථකයි",
+    "errorGifAlt": "දෝෂය",
+    "watermarkLogoAlt": "වොටර්මාර්ක් ලාංඡනය"
+  },"happyDay": {
+    "chooseMessage1": "ඔබගේ සතුටු දිනය තෝරා නොමිලේ",
+    "chooseMessage2": "අසීමිත දත්ත, නොමිලේ",
+    "chooseMessage3": "සම්පූර්ණ දිනය පුරා.",
+    "setDate": "දිනය සකසන්න",
+    "termsConditions": "වෙළඳ නීති සහ කොන්දේසි",
+    "term1": "• ඕනෑම දිනයක් තෝරා 24 පැය නොමිලේ දත්ත භුක්ති විඳින්න.",
+    "term2": "• ඔබේ අවශ්‍යතාවයට අනුව තෝරාගත් දිනයට පෙර දිනකට දිනය වෙනස් කළ හැක.",
+    "success": "සාර්ථකයි",
+    "error": "දෝෂය",
+    "ok": "හරි",
+    "missingServiceIdOrDate": "සේවා හැඳුනුම්පත හෝ දිනය අතුරුදන්ව ඇත. කරුණාකර වලංගු දිනයක් තෝරන්න."
+  },"package": {
+    "currentPackage": "වත්මන් පැකේජය",
+    "standard": "සම්මත",
+    "free": "නොමිලේ",
+    "tax": "බද්ද",
+    "perMonth": "මාසයකට",
+    "upgrade": "යාවත්කාලීන කරන්න",
+    "gb": "ගිගාබයිට්",  "any": "ඕනෑම",
+  "unlimited": "අසීමිත"
+  }, "commo": {
+    "logout": "පිටවීම"
+  },"purchaseHistory": {
+    "title": "මිලදී ගැනීම් ඉතිහාසය",
+    "tabs": {
+      "all": "සියල්ල",
+      "extraGB": "අතිරේක GB",
+      "addOns": "ඇඩ්-ඔන්"
+    },
+    "errors": {
+      "dateRangeRequired": "කරුණාකර දින පරාසය තෝරන්න",
+      "subscriberNotFound": "දායක ID හමු නොවීය.",
+      "invalidDateRange": "වලංගු නොවන දින පරාසය: 'සිට' දිනය 'වෙත' දිනයට පසුව තිබිය නොහැක.",
+      "fetchFailed": "මිලදී ගැනීම් ඉතිහාසය ලබා ගැනීමට අසමත් විය. කරුණාකර නැවත උත්සාහ කරන්න."
+    },
+    "showingResults": "{{from}} සිට {{to}} දක්වා ප්‍රතිඵල පෙන්වමින්",
+    "viewModes": {
+      "summary": "සාරාංශ දැක්ම",
+      "detailed": "විස්තරාත්මක දැක්ම"
+    },
+    "noResults": "තෝරාගත් පරාසය තුළ මිලදී ගැනීම් ඉතිහාසයක් හමු නොවීය.",
+    "tableHeaders": {
+      "type": "පැකේජ වර්ගය",
+      "name": "පැකේජ නාමය",
+      "validTill": "වලංගු දිනය",
+      "price": "මිල"
+    }
+  },
+  "common": {
+    "from": "සිට",
+    "to": "වෙත",
+    "search": "සොයන්න",
+    "type": "වර්ගය",
+    "validTill": "වලංගු දිනය",
+    "unknownPackage": "නොදන්නා පැකේජය",
+    "notAvailable": "නැත",
+    "currency": "රු.",
+    "watermarkAlt": "ජල සලකුණු ලාංඡනය"
+  }, "purchaseHistory": {
+    "title": "මිලදී ගැනීම් ඉතිහාසය",
+    "tabs": {
+      "all": "සියල්ල",
+      "extraGB": "අතිරේක GB",
+      "addOns": "ඇඩ්-ඔන්"
+    },
+    "errors": {
+      "dateRangeRequired": "කරුණාකර දින පරාසය තෝරන්න",
+      "subscriberNotFound": "දායක ID හමු නොවීය.",
+      "invalidDateRange": "වලංගු නොවන දින පරාසය: 'සිට' දිනය 'වෙත' දිනයට පසුව තිබිය නොහැක.",
+      "fetchFailed": "මිලදී ගැනීම් ඉතිහාසය ලබා ගැනීමට අසමත් විය. කරුණාකර නැවත උත්සාහ කරන්න."
+    },
+    "showingResults": "{{from}} සිට {{to}} දක්වා ප්‍රතිඵල පෙන්වමින්",
+    "viewModes": {
+      "summary": "සාරාංශ දැක්ම",
+      "detailed": "විස්තරාත්මක දැක්ම"
+    },
+    "noResults": "තෝරාගත් පරාසය තුළ මිලදී ගැනීම් ඉතිහාසයක් හමු නොවීය.",
+    "tableHeaders": {
+      "type": "පැකේජ වර්ගය",
+      "name": "පැකේජ නාමය",
+      "validTill": "වලංගු දිනය",
+      "price": "මිල"
+    }
+  },
+   
+    "from": "සිට",
+    "to": "වෙත",
+    "search": "සොයන්න",
+    "type": "වර්ගය",
+    "validTill": "වලංගු දිනය",
+    "unknownPackage": "නොදන්නා පැකේජය",
+    "notAvailable": "නැත",
+    "currency": "රු.",
+    "watermarkAlt": "ජල සලකුණු ලාංඡනය"
+  ,"extra_gb": {
+  "price_plan": "මිල සැලැස්ම",
+  "range_1_to_3": "1GB සිට 3GB දක්වා",
+  "range_5_to_19": "5GB සිට 19GB දක්වා",
+  "range_20_to_49": "20GB සිට 49GB දක්වා",
+  "range_above_50": "50GB ට වැඩි",
+  "currency_per_gb": "රු/GB",
+  "price_format": "රු. {{price}} + බද්ද",
+  "add_to_bill": "බිලට එක් කරන්න",
+  "pay_now": "දැන් ගෙවන්න",
+  "terms_agreement": "මම එකඟ වෙමි",
+  "terms_conditions": "සාමාන්ය නියමයන් හා කොන්දේසි",
+  "submit_button": "ඉදිරිපත් කරන්න",
+  "error_title": "දෝෂයක්",
+  "success_title": "සාර්ථකයි",
+  "close_button": "වසන්න",
+  "validation_error": "කරුණාකර සියලු අවශ්‍ය විකල්ප තෝරන්න",
+  "bill_add_error": "බිලට එක් කිරීම අසාර්ථක විය",
+  "bill_add_success": "පැකේජය ඔබේ බිලට සාර්ථකව එක් කරන ලදී",
+  "generic_error": "予පේක්ෂා නොකළ දෝෂයක් සිදු විය",
+  "no_packages_error": "පැකේජ විකල්ප නොමැත",
+  "fetch_error": "පැකේජ විකල්ප ලැබිය නොහැකි විය"
+},"addons": {
+    "price_format": "රු. {{price}}",
+    "activate_button": "සක්‍රීය කරන්න",
+    "confirm_title": "තහවුරු කරන්න",
+    "confirm_message": "ඔබට {{packageName}} මිලදී ගෙන සක්‍රීය කිරීමට අවශ්‍යද?",
+    "one_time_option": "තනි වරක්",
+    "recurrent_option": "නැවත නැවත",
+    "no_button": "නැත",
+    "yes_button": "ඔව්"
+  },"broadband_nav": {
+    "my_package": "මගේ පැකේජය",
+    "data": "දත්ත",
+    "voice": "හඬ",
+    "sms": "SMS",
+    "lms": "LMS",
+    "home_schooling_wfh": "ගෙදර ඉගෙනීම සහ වැඩ",
+    "usage_format": "{{used}} භාවිතා කළ {{limit}} GB වලින්",
+    "not_available": "නැත"
+  },"My Profile": "මගේ පැතිකඩ",
+  "You are logged in as a EasyLogin": "ඔබ EasyLogin ලෙස පිවිසෙමින් ඇත",
+  "Enter Your Mobile": "ඔබගේ ජංගම දුරකථන අංකය ඇතුළත් කරන්න",
+  "Name": "නම",
+  "Update": "යාවත්කාලීන",
+  "Confirm Deletion": "මකන ලද බව තහවුරු කරන්න",
+  "Are you sure you want to delete your profile? This action cannot be undone.": "ඔබට ඔබගේ පැතිකඩ මකා දැමීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව ආපසු හැරිය නොහැක.",
+  "No": "නැහැ",
+  "Yes": "ඔව්",
+  "Profile successfully terminated.": "පැතිකඩ සාර්ථකව මකා දමා ඇත.",
+  "Failed to terminate the profile.": "පැතිකඩ මකා දැමීම අසාර්ථකයි.", "no_peo_tv_connection": "PEO ටීවී සම්බන්ධතාවක් නොමැත",
+  "no_peo_tv_message": "ඔබට PEO ටීවී සම්බන්ධතාවක් නොමැති බව පෙනේ. එකක් ඉල්ලමු!",
+  "close": "වසන්න",
+  "request_now": "දැන් ඉල්ලන්න",
+  "service_id": "සේවා හැඳුනුම්පත",
+  "status": "තත්වය",
+  "no_data": "දැක්වීමට දත්ත නැත","callForwarding": {
+    "title": "ඇමතුම් මාරු කිරීම",
+    "yourNumber": "ඔබේ අංකය",
+    "forwardingNumber": "මාරු කිරීමට ඇති අංකය",
+    "enterPlaceholder": "මාරු කිරීමට අංකය ඇතුළත් කරන්න",
+    "terms": "සාමාන්‍ය නියමයන් හා කොන්දේසි වලට මම එකඟ වෙමි",
+    "subscribe": "දායක වන්න",
+    "statusFailed": "ඇමතුම් මාරු තත්වය අසාර්ථකයි",
+    "statusSuccess": "ඇමතුම් මාරු ඉල්ලීම සාර්ථකයි",
+    "unknownStatus": "API වෙතින් නොදන්නා තත්වයක් ලැබී ඇත",
+    "apiUnavailable": "සමාවන්න, සේවාව මේ දවස්වල ලබා ගත නොහැක. නැවත උත්සාහ කරන්න",
+    "enterNumber": "කරුණාකර මාරු කිරීමට අංකය ඇතුළත් කරන්න.",
+    "activated": "ඇමතුම් මාරු කිරීම සාර්ථකව සක්‍රීය කර ඇත.",
+    "cancelled": "ඇමතුම් මාරු කිරීම සාර්ථකව අහෝසි කර ඇත.",
+    "failedRequest": "ඉල්ලීම සැකසීමට අසමත් විය.",
+    "serviceFine": "සේවාව සාමාන්‍යය පරිදි ක්‍රියා කරයි.",
+    "ok": "හරි"
+  },"loginOrSignup": {
+    "login": "ඇතුල් වන්න",
+    "signup": "ලියාපදිංචි වන්න",
+    "loginImageAlt": "ඇතුල්වීමේ චිත්‍රණය"
+  }, "packageActivation": {
+    "fetchError": "පැකේජ ලබා ගැනීමට අසමත් විය: {{error}}",
+    "validity": "වලංගු භාවය",
+    "activateNow": "දැන් සක්‍රිය කරන්න",
+    "confirmTitle": "පැකේජ සක්‍රිය කිරීම තහවුරු කරන්න",
+    "confirmMessage": "ඔබ සක්‍රිය කිරීමට යන්නේ:",
+    "details": "විස්තර",
+    "confirmButton": "සක්‍රිය කිරීම තහවුරු කරන්න"
+  },
+  "com": {
+    "gb": "GB",
+    "rs": "රු.",
+    "withTax": "බද්ද සහිතව",
+    "days": "දින",
+    "cancel": "අවලංගු කරන්න"
+  },
+  "me": {
+    "dataAddOns": "දත්ත ඇඩ්-ඔන්"
+  },"packages": {
+    "mainMenu": "ප්‍රධාන පැකේජ",
+    "errors": {
+      "fetchFailed": "පැකේජ ලබා ගැනීමට අසමත් විය: {{error}}"
+    },
+    "validity": "වලංගු කාලය",
+    "activateNow": "දැන් සක්‍රිය කරන්න",
+    "confirmActivation": "පැකේජ සක්‍රිය කිරීම තහවුරු කරන්න",
+    "activateConfirmation": "ඔබ සක්‍රිය කිරීමට යන්නේ:",
+    "details": "විස්තර",
+    "confirmButton": "සක්‍රිය කිරීම තහවුරු කරන්න"
+  },
+  "co": {
+    "currency": "රු.",
+    "withTax": "බද්ද සහිත",
+    "days": "දින",
+    "cancel": "අවලංගු කරන්න"
+  },"broadband": {
+    "status": "තත්වය",
+    "username": "පරිශීලක නාමය",
+    "dataUsage": "භාවිතා කළ {{used}} GB / සම්පූර්ණ {{total}} GB",
+    "validTill": "වලංගු තෙක්",
+    "noData": "පෙන්වීමට දත්ත නැත",
+    "mainPackage": "ප්‍රධාන පැකේජය",
+    "dataAddons": "දත්ත ඇඩ්-ඔන්",
+    "getMainPackage": "ප්‍රධාන පැකේජය ලබා ගන්න",
+    "getDataAddons": "දත්ත ඇඩ්-ඔන් ලබා ගන්න", 
+    "loading": "පූරණය වෙමින්...",
+    "watermarkAlt": "ජල සලකුණු ලාංඡනය"
+  },"transactions": {
+    "title": "ගනුදෙනු ඉතිහාසය",
+    "from": "සිට:",
+    "to": "දක්වා:",
+    "search": "සෙවීම",
+    "searching": "සෙවෙමින්...",
+    "error_loading": "ගනුදෙනු ඉතිහාසය පූරණය කිරීමට අසමත් විය. කරුණාකර පසුව උත්සාහ කරන්න.",
+    "no_results": "තෝරාගත් කාලය සඳහා ගනුදෙනු නොමැත",
+    "invalid_date": "සිට දිනය දක්වා දිනයට වඩා පසුව නොවිය යුතුය",
+    "table": {
+      "date": "දිනය",
+      "time": "වේලාව",
+      "status": "තත්වය",
+      "amount": "මුදල",
+      "success": "සාර්ථකයි",
+      "failed": "අසාර්ථකයි"
+    }
+  },"vod": {
+    "noServiceTitle": "වීඩියෝ මඟින් බලන සේවාවක් නොමැත",
+    "noServiceMessage": "ඔබ සතුව VOD සේවාදානයක් නොමැත. දැන්ම දායක වන්න!",
+    "subscribeNow": "දැන්ම දායක වන්න",
+    "serviceID": "සේවා හැඳුනුම්පත",
+    "status": "තත්ත්වය",
+    "noVideos": "වීඩියෝ නැත"
+  },
+  "c": {
+    "close": "වසන්න"
+  }, "usage": {
+    "title": " භාවිතය පිළිබඳ විස්තර ",
+    "basePackage": "මූලික පැකේජය",
+    "extraGB": "අමතර GB",
+    "loyalty": "ව්‍යාපාරික ආධාර",
+    "vas": "VAS",
+    "totalUsage": "මුළු භාවිතය - {{amount}}{{unit}}",
+    "noData": "දත්ත නොමැත",
+    "legend": {
+      "pd": "PD - උපරිම බාගත කිරීම",
+      "pu": "PU - උපරිම උඩුගත කිරීම",
+      "od": "OD - අවසන් වේලාවේ බාගත කිරීම",
+      "ou": "OU - අවසන් වේලාවේ උඩුගත කිරීම"
+    }
+  }, "dailyUsage": {
+    "title": "දෛනික භාවිතය",
+    "currentMonth": "වත්මන් මාසය",
+    "lastMonth": "පසුගිය මාසය",
+    "twoMonthsAgo": "මාස දෙකකට පෙර",
+    "fetchError": "දෛනික භාවිත දත්ත ලබා ගැනීමේ දෝෂය:",
+    "basePackage": "මූලික පැකේජය",
+    "extraGB": "අතිරේක ජීබී",
+    "loyalty": "විශ්වාසනීයත්වය",
+    "vas": "VAS",
+    "date": "දිනය",
+    "totalUsage": "සම්පූර්ණ භාවිතය",
+    "usage": "භාවිතය",
+    "report": "වාර්තාව",
+    "viewDetailedUsage": "විස්තරාත්මක භාවිතය බලන්න"
+  },
+  "common": {
+    "loading": "දත්ත ලබා ගැනීම...",
+    "inGB": "ගිගාබයිට් වලින්",
+    "noData": "දත්ත නැත",
+    "noDataAvailable": "ලබා ගත හැකි දත්ත නැත",
+    "more": "තවත්",
+    "view": "බලන්න", "detailedUsageDetails": "විස්තරාත්මක භාවිත විස්තර",
+    "protocolReport": "ප්‍රොටෝකෝල් වාර්තාව",
+    "subscription": "දායකත්වය"
+  }, "changeContactInfo": "සම්බන්ධතා තොරතුරු වෙනස් කරන්න",
+  "fullName": "සම්පූර්ණ නම",
+  "emailAddress": "ඊමේල් ලිපිනය",
+  "mobile": "ජංගම දුරකථන අංකය",
+  "submit": "යොමු කරන්න",
+  "notification": "දැනුම්දීම",
+  "fillAllFields": "කරුණාකර සියලු ක්ෂේත්‍ර නිවැරදිව පුරවන්න",
+  "updateSuccess": "සම්බන්ධතා තොරතුරු සාර්ථකව යාවත්කාලින කළා",
+  "updateFailed": "සම්බන්ධතා යාවත්කාලීන කිරීම අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "updateError": "සම්බන්ධතා යාවත්කාලීන කිරීමේදී දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "ok": "හරි","unsubscribeTitle": " විස්තරාත්මක වාර්තා සඳහා දායකත්වය අවසන් කරන්න ",
+  "unsubscribeText": "භාවිත වාර්තාව සඳහා දායකත්වය අවසන් කරන්න",
+  "submit": "යොමු කරන්න", "changePasswordTitle": "බ්‍රෝඩ්බැන්ඩ් මුරපදය වෙනස් කරන්න",
+  "currentPassword": "වත්මන් මුරපදය",
+  "newPassword": "නව මුරපදය",
+  "confirmPassword": "මුරපදය තහවුරු කරන්න",
+  "updatePassword": "මුරපදය යාවත්කාලීන කරන්න", "on": "දිනය", "go": "යන්න","promotion_title": " ප්‍රවර්ධන ",
+  "loading_promotions": "ප්‍රවර්ධන ලැබෙමින් පවතියි...",
+  "error_fetching_promotions": "ප්‍රවර්ධන ලබා ගැනීමට අසමත් විය.",
+  "no_promotions": "මෙම අංකයට ප්‍රවර්ධන නොමැත.",
+  "activated": "සක්‍රීය කර ඇත",
+  "activate": "සක්‍රීය කරන්න",
+  "promotion_activation": "ප්‍රවර්ධන සක්‍රීය කිරීම",
+  "close": "වසන්න", "detailedUsage": {
+    "title": "භාවිත විස්තර",
+    "basePackage": "මූලික පැකේජය",
+    "extraGB": "අමතර GB",
+    "loyalty": "පුනරූපීතාව",
+    "vas": "VAS සේවාවන්",
+    "totalUsage": "මුළු භාවිතය",
+    "noData": "දත්ත නැත",
+    "pd": "PD - උච්චාංශ බාගත කිරීම",
+    "pu": "PU - උච්චාංශ උඩුගත කිරීම",
+    "od": "OD - අවුච්චාංශ බාගත කිරීම",
+    "ou": "OU - අවුච්චාංශ උඩුගත කිරීම"
+  },"protocol": {
+  "total": "මුළු",
+  "download": "බාගත",
+  "upload": "උඩුගත",
+  "dateUsage": "දින සඳහා දත්ත භාවිතය"
+},"fiberRequest": {
+    "title": "SLT ෆයිබර් ගෘහ රේඛාව"
+  }, "newServices": {
+    "title": "නව සේවා",
+    "fiber": "ෆයිබර්",
+    "megaline": "මැගාලයින්",
+    "4glte": "4G LTE"
+  }, "firstName": "පළමු නම",
+  "lastName": "අවසන් නම",
+  "nic": "ජාතික හැඳුනුම්පත් අංකය (NIC)",
+  "mobileNumber": "ජංගම දුරකථන අංකය",
+  "submit": "යවන්න",
+  "success": "සාර්ථකයි",
+  "error": "දෝෂයකි",
+  "newConnectionCreated": "නව සම්බන්ධතාවය සාර්ථකව තනන ලදි!",
+  "unexpectedError": "අපේක්ෂිත නොවූ දෝෂයක් සිදු විය.","requestNow": "දැන් ඉල්ලන්න",
+  "fiberOnTheWay": "ෆයිබර් මඟින් යමින් පවතී", "currentMonth": "වත්මන් මාසය",
+  "dailyUsage": "දිනපතා භාවිතය",
+  "loadingData": "දත්ත පූරණය වෙමින් පවතී...",
+  "basePackage": "මූලික පැකේජය",
+  "extraGB": "අතිරේක GB",
+  "loyalty": "වෛවර්",
+  "vas": "VAS",
+  "date": "දිනය",
+  "totalUsage": "මුළු භාවිතය",
+  "usage": "භාවිතය",
+  "report": "වාර්තාව",
+  "viewDetailedUsage": "විස්තරාත්මක භාවිතය බැලීම",
+  "noData": "දත්ත නොමැත",
+  "more": "වැඩි",
+  "view": "බලන්න",
+  "noDataAvailable": "දත්ත නොමැත","complaints": {
+    "title": "පැමිණිලි",
+    "noFaultsFound": "දෝෂ කිසිවක් හමු නොවීය.",
+    "failedToFetch": "දෝෂ ලැයිස්තුව ලබා ගැනීම අසාර්ථක විය.",
+    "failedToFetchTryAgain": "දෝෂ ලැයිස්තුව ලබා ගැනීම අසාර්ථක විය. කරුණාකර නැවත උත්සහ කරන්න.",
+    "serviceName": "සේවා නාමය",
+    "faultRef": "දෝෂ යොමු අංකය",
+    "status": "තත්ත්වය",
+    "date": "දිනය",
+    "submitButton": "ඔබගේ පැමිණිල්ල ඉදිරිපත් කරන්න"
+  },
+  "common": {
+    "loading": "පැරැඳෙමින්..."
+  },  "add_complaints": {
+    "title": "පැමිණිල්ල ඉදිරිපත් කරන්න",
+    "serviceType": "සේවා වර්ගය",
+    "contactNumber": "දුරකථන අංකය",
+    "complaintDescription": "පැමිණිලි විස්තරය",
+    "mapPlaceholder": "අවශ්‍ය නම් ස්ථානය තෝරන්න",
+    "submitBtn": "ඉදිරිපත් කරන්න",
+    "validationError": "අවශ්‍ය සියළු ක්ෂේත්‍ර පුරවන්න.",
+    "success": "පැමිණිල්ල සමත් ලෙස ඉදිරිපත් කරන ලදි!",
+    "unknownError": "නොදන්නා දෝෂයක් සිදු විය",
+    "unexpectedError": "අනපේක්ෂිත දෝෂයක් සිදුවිය",
+    "services": {
+      "all": "සියල්ල",
+      "broadband": "බ්‍රොඩ්බෑන්ඩ්",
+      "peotv": "පීඕටීවී",
+      "voice": "හඬ"
+    }
+  },
+  "common": {
+    "success": "සාර්ථකයි",
+    "error": "දෝෂයකි",
+    "ok": "හරි"
+  }, "addComplaints": {
+    "title": "පැමිණිල්ලක් ඉදිරිපත් කරන්න",
+    "serviceType": "සේවා වර්ගය",
+    "contactNumber": "දුරකථන අංකය",
+    "description": "පැමිණිල්ලේ විස්තරය",
+    "location": "ස්ථානය ඇතුළත් කරන්න",
+    "all": "සියල්ල",
+    "broadband": "බ්‍රෝඩ්බෑන්ඩ්",
+    "peotv": "PeoTV",
+    "voice": "හඬ",
+    "submit": "ඉදිරිපත් කරන්න",
+    "success": "සාර්ථකයි",
+    "error": "දෝෂයක්",
+    "ok": "හරි",
+    "validationError": "කරුණාකර සියලු අවශ්‍ය ක්ෂේත්‍ර පුරවන්න.",
+    "submitSuccess": "පැමිණිල්ල සාර්ථකව ඉදිරිපත් කරන ලදි!",
+    "submitFailure": "予期せぬエラーが発生しました。"
+  },  "currency": "රු."
+
+
+ 
+
+
+
+ 
+}

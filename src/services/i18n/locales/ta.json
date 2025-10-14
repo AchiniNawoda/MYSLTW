@@ -1,0 +1,580 @@
+{
+  "languages": {
+    "language": "மொழி",
+    "english": "English",
+    "sinhala": "සිංහල",
+    "tamil": "தமிழ்"
+  },
+  "socialLogin": {
+    "orSignInWith": "அல்லது பின்வருமாறு உள்நுழையவும்",
+    "googleLogin": "Google உள்நுழைதல்",
+    "facebookLogin": "Facebook உள்நுழைதல்",
+    "loading": "ஏற்றுகிறது..."
+  },"login": {
+    "title": "உள்நுழைய",
+    "emailLabel": "மின்னஞ்சல்",
+    "emailPlaceholder": "உங்கள் மின்னஞ்சலை உள்ளிடவும்",
+    "passwordLabel": "கடவுச்சொல்",
+    "passwordPlaceholder": "உங்கள் கடவுச்சொல்லை உள்ளிடவும்",
+    "togglePasswordVisibility": "கடவுச்சொலைக் காட்டு/மறை",
+    "forgotPassword": "கடவுச்சொல் மறந்துவிட்டீர்களா?",
+    "loginButton": "உள்நுழைய",
+    "noAccountText": "கணக்கு இல்லையா?",
+    "signUpLink": "பதிவு செய்யவும்"
+  },"signup": {
+    "title": "பதிவு செய்யவும்",
+    "emailOrMobile": "மின்னஞ்சல் அல்லது மொபைல் எண்",
+    "emailOrMobilePlaceholder": "உங்கள் மின்னஞ்சல் அல்லது மொபைல் எண்ணை உள்ளிடவும்",
+    "name": "பெயர்",
+    "namePlaceholder": "உங்கள் பெயரை உள்ளிடவும்",
+    "password": "கடவுச்சொல்",
+    "passwordPlaceholder": "உங்கள் கடவுச்சொல்லை உள்ளிடவும்",
+    "confirmPassword": "கடவுச்சொல்லை உறுதிப்படுத்தவும்",
+    "confirmPasswordPlaceholder": "உங்கள் கடவுச்சொல்லை மீண்டும் உள்ளிடவும்",
+    "togglePasswordVisibility": "கடவுச்சொல்லை காட்டு/மறை",
+    "signupButton": "பதிவு செய்யவும்",
+    "error": {
+      "passwordMismatch": "கடவுச்சொற்கள் பொருந்தவில்லை!",
+      "invalidInput": "தவறான மின்னஞ்சல் அல்லது 10 இலக்க மொபைல் எண்!",
+      "registrationFailed": "பதிவு தோல்வியடைந்தது",
+      "generic": "பதிவின்போது ஒரு பிழை ஏற்பட்டது"
+    }
+  },  "forgetPassword": {
+    "title": "கடவுச்சொல்லை மறந்துவிட்டீர்களா?",
+    "description": "உங்கள் பதிவு செய்யப்பட்ட மின்னஞ்சல் முகவரி அல்லது கைபேசி எண்ணை உள்ளிடவும், உங்கள் கடவுச்சொல்லை மீட்டமைக்க ஒரு OTP அனுப்பப்படும்.",
+    "userIDLabel": "பயனர் ஐடி",
+    "userIDPlaceholder": "உங்கள் மின்னஞ்சல் அல்லது கைபேசி எண்ணை உள்ளிடவும்",
+    "submitButton": "சமர்ப்பிக்கவும்",
+    "backTo": "திரும்ப",
+    "signIn": "உள்நுழைய"
+  }, "Summary": "சுருக்கம்",
+  "Daily Usage": "நாளாந்தம் பயன்பாடு",
+  "Gift Data": "பரிசுத் தரவு",
+  "History": "வரலாறு",
+  "Redeem Data": "தரவை மீட்டமை",
+  "Happy Day": "மகிழ்ச்சியான நாள்",
+  "More": "மேலும்",
+  "Main Packages": "முக்கிய பேக்கேஜ்கள்",
+  "Data Add-Ons": "தரவு கூடுதல் தொகுப்புகள்",
+  "My Package": "என் தொகுப்பு",
+  "VOD": "வீடியோ-ஓன்-டிமாண்ட்",
+  "PEOTVGO": "PEOTVGO",
+  "Packages": "தொகுப்புகள்",
+  "Call Forwarding": "அழைப்பு மாற்றம்",
+  "Enable Detailed Report": "விவரமான அறிக்கையை இயக்கு",
+  "Disable Detailed Report": "விவரமான அறிக்கையை முடக்கு",
+  "Change Contact Information": "தொடர்பு தகவலை மாற்று",
+  "Change Broadband Password": "பிராட்பேண்ட் கடவுச்சொல்லை மாற்று", "menu": {
+    "mySLT": "மைSLT",
+    "myProfile": "என் சுயவிவரம்",
+    "manageConnections": "இணைப்புகளை நிர்வகிக்கவும்"
+  },
+  "common": {
+    "logout": "வெளியேறு"
+  }, "navbar": {
+    "broadband": "ப்ராட்பேண்ட்",
+    "peoTV": "PEO டிவி",
+    "voice": "ஒலி",
+    "mobile": "மொபைல்"
+  }, "My Package": "எனது தொகுப்பு",
+      "Extra GB": "கூடுதல் GB",
+      "Bonus Data": "போனஸ் தரவு",
+      "Add-Ons": "கூடுதல்",
+      "Free Data": "இலவச தரவு",
+      "Your speed is {{status}} right now": "உங்கள் வேகம் இப்போது {{status}} ஆகும்",
+      "{{used}} GB USED OF {{limit}} GB": "{{used}} GB பயன்படுத்தப்பட்டது {{limit}} GB இல்",
+      "Valid Till : {{date}}": "செல்லுபடியாகும் தேதி : {{date}} வரை",
+      "No data available for this package": "இந்த தொகுப்பிற்கு தரவு இல்லை",
+      "Package Upgrade": "தொகுப்பை மேம்படுத்து",
+      "Package": "தொகுப்பு",
+       "Status": "நிலை",
+      "Username": "பயனர் பெயர்",
+      "Top Picks": "உயர்ந்த தேர்வுகள்",
+      "Get Extra GB": "கூடுதல் GB பெறவும்",
+      "Get Data Add-ons": "தரவு கூடுதல் பெறவும்",
+      "Get Main Package": "முதன்மை தொகுப்பை பெறவும்",
+      "Watermark Logo": "நீர்முத்திரை சின்னம்","Promotion": "விளம்பரம்",
+      "New Services": "புதிய சேவைகள்",
+      "Digital Life": "டிஜிட்டல் வாழ்க்கை",
+      "Bill": "பில்",
+      "Reload": "ரிலோட்",
+      "Hot Devices": "சூடான சாதனங்கள்",
+      "LifeStore": "லைஃப் ஸ்டோர்",      
+      "Complaints": "புகார்கள்",
+      "Value Added": "மதிப்பைச் சேர்க்கும்",
+  "Services": "சேவைகள்",
+       "Value Added Services": "கூடுதல் மதிப்புள்ள சேவைகள்","bill": {
+    "totalPayable": "மொத்தம் செலுத்த வேண்டியது",
+    "forMonthEnding": "மாத இறுதி தேதி",
+    "lastPayment": "கடைசி கட்டணம்",
+    "payNow": "இப்போது செலுத்து"
+  },
+  "common": {
+    "currency": "ரூ.",
+    "on": "தேதி"
+  },"total_payable": "மொத்த பணம் செலுத்தவேண்டியவை",
+  "bill_history": "பில் வரலாறு",
+  "bill_methods": "பில் கட்டும் முறைகள்", "outstandingBills": {
+    "outstanding": "சமீபத்திய நிலுவை",
+    "billValue": "பில்லின் மதிப்பு",
+    "for": "க்கு",
+    "payments": "கட்டணங்கள்",
+    "emailNow": "இப்போதே மின்னஞ்சல் செய்யவும்",
+    "downloadEBill": "மின்னணு பில்லைக் கையகப்படுத்து",
+    "noBillingHistory": "பில் வரலாறு இல்லை.",
+    "downloadSuccess": "மின்னணு பில் வெற்றிகரமாக பதிவிறக்கம் செய்யப்பட்டது!",
+    "noBillFound": "மன்னிக்கவும், கொடுக்கப்பட்ட மாதத்திற்கான பில் கிடைக்கவில்லை.",
+    "downloadError": "மின்னணு பில் பதிவிறக்கம் செய்யும் போது பிழை ஏற்பட்டது.",
+    "noEmail": "மின்னஞ்சல் முகவரி இல்லை.",
+    "emailSent": "மின்னஞ்சல் வெற்றிகரமாக அனுப்பப்பட்டது!",
+    "emailProcessing": "மன்னிக்கவும், உங்கள் பில் இன்னும் செயலாக்கத்தில் உள்ளது.",
+    "emailError": "மின்னஞ்சல் அனுப்பும் போது பிழை ஏற்பட்டது.",
+    "dialogTitle": "அறிவிப்பு",
+    "close": "மூடு"
+  }, "billMethod": {
+    "noPrivilegeTitle": "அனுமதி இல்லை",
+    "noPrivilegeMessage": "பில் முறை மாற்ற அனுமதி இல்லை",
+    "currentBillMethod": "தற்போதைய பில் முறை",
+    "otherMethods": "மற்றும் முறைகள்",
+    "getBillVia": "{{method}} மூலம் உங்கள் பிலை பெறுங்கள்",
+    "agreeTerms": "பொது விதிமுறைகள் மற்றும் நிபந்தனைகளுக்கு நான் ஒப்புக்கொள்கிறேன்",
+    "submit": "சமர்ப்பிக்கவும்",
+    "edit": "திருத்தவும்",
+    "notificationTitle": "அறிவிப்பு",
+    "close": "மூடு"
+  },"Balance": "மீதமுள்ள தொகை",
+  "Total Payable": "மொத்தம் பணம் செலுத்தவேண்டியது",
+  "Expires on ": "காலாவதியான தேதி ",
+  "For month Ending at ": "மாத இறுதியில் ",
+  "N/A": "கிடைக்கவில்லை",
+  "Transaction": "பரிவர்த்தனை",
+  "Pay Now": "இப்போதே செலுத்து","Daily Usage": "தினசரி பயன்பாடு",
+  "Current Month": "நடப்பு மாதம்",
+  "Loading data...": "தரவு ஏற்றுகிறது...",
+  "Base Package": "அடிப்படை தொகுப்பு",
+  "Extra GB": "மேலும் GB",
+  "Loyalty": "நம்பிக்கை",
+  "VAS": "சேவைகள்",
+  "Date": "தேதி",
+  "Total Usage": "மொத்த பயன்பாடு",
+  "Usage": "பயன்பாடு",
+  "Report": "அறிக்கை",
+  "No Usage": "பயன்பாடு இல்லை",
+  "View": "பார்வை",
+  "No data available": "தரவு இல்லை", "Enter the username of the person to whom you wish to Gift Data": "நீங்கள் தரவு பரிமாற்ற விரும்பும் நபரின் பயனர் பெயரை உள்ளிடவும்",
+  "Select the package by tapping VALIDATE RECEIVER": "சரிபார்ப்பு பெறுநரைத் தட்டச்சு செய்து தொகுப்பை தேர்ந்தெடுக்கவும்",
+  "Receiver's username :": "பெறுநரின் பயனர் பெயர் :",
+  "Validate Receiver": "பெறுநரைச் சரிபார்க்கவும்",
+  "Ensure the username is correct, as this transaction cannot be reversed.": "பயனர் பெயர் சரியானது என்பதை உறுதி செய்யவும், இந்த பரிவர்த்தனை மாற்ற முடியாது.",
+  "Subscriber ID or username is missing. Please provide both.": "சந்தா எண் அல்லது பயனர் பெயர் இல்லை. இரண்டும் வழங்கவும்.",
+  "Receiver Validate Success": "பெறுநர் சரிபார்ப்பு வெற்றி",
+  "Subscriber ID you entered is Invalid – Please enter a correct Subscriber ID.": "நீங்கள் உள்ளிடிய சந்தா எண் தவறானது – சரியான சந்தா எண்ணை உள்ளிடவும்.",
+  "Unexpected error occurred during the API call.": "API அழைப்பில் எதிர்பாராத பிழை ஏற்பட்டது.",
+  "An error occurred during validation.": "சரிபார்ப்பின் போது பிழை ஏற்பட்டது.",
+  "Success": "வெற்றி",
+  "Error": "பிழை",
+  "Ok": "சரி","redeem": {
+    "enterPromoCode": "ஆஃபரை பெற வவுச்சரில் உள்ள புரோமோ குறியீட்டை உள்ளிடவும்.",
+    "enterVoucherIdLabel": "உங்கள் வவுச்சர் ஐடியை உள்ளிடவும்:",
+    "enterVoucherId": "தயவுசெய்து ஒரு வவுச்சர் ஐடி உள்ளிடவும்.",
+    "serviceIdMissing": "சேவை ஐடி காணப்படவில்லை. வவுச்சர் ரிடீம் செய்ய முடியவில்லை.",
+    "successMessage": "வவுச்சர் வெற்றிகரமாக ரிடீம் செய்யப்பட்டது!",
+    "failureMessage": "வவுச்சர் ரிடீம் செய்ய தவறியது. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+    "unexpectedError": "ஒரு எதிர்பாராத பிழை ஏற்பட்டது. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+    "processing": "செயல்படுத்தப்படுகிறது...",
+    "redeemVoucher": "வவுச்சர் ரிடீம் செய்க",
+    "success": "வெற்றி",
+    "error": "பிழை",
+    "ok": "சரி",
+    "redeemIconAlt": "ரிடீம் ஐகான்",
+    "successGifAlt": "வெற்றி",
+    "errorGifAlt": "பிழை",
+    "watermarkLogoAlt": "வாட்டர்மார்க் லோகோ"
+  },"happyDay": {
+    "chooseMessage1": "உங்கள் சந்தோஷமான நாளை தேர்ந்தெடுத்து",
+    "chooseMessage2": "வரம்பற்ற தரவு, இலவசமாக",
+    "chooseMessage3": "முழு நாளும் அனுபவிக்கவும்.",
+    "setDate": "தேதி அமைக்கவும்",
+    "termsConditions": "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
+    "term1": "• எந்த நாளையும் தேர்வு செய்து 24 மணிநேரம் இலவச தரவை அனுபவிக்கவும்.",
+    "term2": "• தேர்ந்தெடுத்த நாளுக்கு ஒரு நாள் முன்பாக தேதியை உங்கள் தேவைக்கு ஏற்ப மாற்றலாம்.",
+    "success": "வெற்றி",
+    "error": "பிழை",
+    "ok": "சரி",
+    "missingServiceIdOrDate": "சேவை ஐடி அல்லது தேதி இல்லை. தயவுசெய்து சரியான தேதியை தேர்வு செய்யவும்."
+  },"commo": {
+  "logout": "வெளியேறு"
+},"purchaseHistory": {
+    "title": "வாங்கிய வரலாறு",
+    "tabs": {
+      "all": "அனைத்தும்",
+      "extraGB": "கூடுதல் GB",
+      "addOns": "கூடுதல் தொகுப்புகள்"
+    },
+    "errors": {
+      "dateRangeRequired": "தேதி வரம்புகளைத் தேர்ந்தெடுக்கவும்",
+      "subscriberNotFound": "சந்தாதாரர் ID கிடைக்கவில்லை.",
+      "invalidDateRange": "தவறான தேதி வரம்பு: 'இருந்து' தேதி 'வரை' தேதிக்குப் பிறகு இருக்க முடியாது.",
+      "fetchFailed": "வாங்கிய வரலாற்றைப் பெறுவதில் தோல்வி. மீண்டும் முயற்சிக்கவும்."
+    },
+    "showingResults": "{from} முதல் {to} வரை முடிவுகளைக் காட்டுகிறது",
+    "viewModes": {
+      "summary": "சுருக்கக் காட்சி",
+      "detailed": "விரிவான காட்சி"
+    },
+    "noResults": "தேர்ந்தெடுத்த வரம்பில் வாங்கிய வரலாறு எதுவும் கிடைக்கவில்லை.",
+    "tableHeaders": {
+      "type": "தொகுப்பு வகை",
+      "name": "தொகுப்பு பெயர்",
+      "validTill": "செல்லுபடியாகும் தேதி",
+      "price": "விலை"
+    }
+  },
+  
+    "from": "இருந்து",
+    "to": "வரை",
+    "search": "தேடு",
+    "type": "வகை",
+    "validTill": "செல்லுபடியாகும் தேதி",
+    "unknownPackage": "தெரியாத தொகுப்பு",
+    "notAvailable": "இல்லை",
+    "currency": "ரூ.",
+    "watermarkAlt": "நீர் முத்திரை லோகோ"
+  ,"package": {
+  "currentPackage": "தற்போதைய தொகுப்பு",
+  "standard": "நிலையானது",
+  "free": "இலவசம்",
+  "tax": "வரி",
+  "perMonth": "ஒரு மாதத்திற்கு",
+  "upgrade": "மேம்படுத்து",
+  "gb": "கிகாபைட்",
+  "any": "எதையும்",
+  "unlimited": "வரம்பில்லாது"
+},"extra_gb": {
+  "price_plan": "விலை திட்டம்",
+  "range_1_to_3": "1GB முதல் 3GB வரை",
+  "range_5_to_19": "5GB முதல் 19GB வரை",
+  "range_20_to_49": "20GB முதல் 49GB வரை",
+  "range_above_50": "50GBக்கும் மேலாக",
+  "currency_per_gb": "ரூபாய்/GB",
+  "price_format": "ரூ. {{price}} + வரி",
+  "add_to_bill": "பில்லில் சேர்க்கவும்",
+  "pay_now": "இப்போது செலுத்து",
+  "terms_agreement": "நான் ஒப்புக்கொள்கிறேன்",
+  "terms_conditions": "பொது விதிமுறைகள் மற்றும் நிபந்தனைகள்",
+  "submit_button": "சமர்ப்பிக்கவும்",
+  "error_title": "தவறு",
+  "success_title": "வெற்றி",
+  "close_button": "மூடவும்",
+  "validation_error": "தயவுசெய்து தேவையான அனைத்து விருப்பங்களையும் தேர்வு செய்யவும்",
+  "bill_add_error": "பில்லில் சேர்க்க முடியவில்லை",
+  "bill_add_success": "தொகுப்பு உங்கள் பில்லில் வெற்றிகரமாக சேர்க்கப்பட்டது",
+  "generic_error": "எதிர்பாராத பிழை ஏற்பட்டது",
+  "no_packages_error": "தொகுப்பு விருப்பங்கள் இல்லை",
+  "fetch_error": "தொகுப்பு விருப்பங்களை ஏற்ற முடியவில்லை"
+}, "addons": {
+    "price_format": "ரூ. {{price}}",
+    "activate_button": "செயல்படுத்து",
+    "confirm_title": "உறுதிப்படுத்தவும்",
+    "confirm_message": "நீங்கள் {{packageName}} வாங்கி செயல்படுத்த விரும்புகிறீர்களா?",
+    "one_time_option": "ஒரு முறை",
+    "recurrent_option": "தொடர்ச்சியான",
+    "no_button": "இல்லை",
+    "yes_button": "ஆம்"
+  },"bar": {
+    "my_package": "என் தொகுப்பு",
+    "data": "தரவு",
+    "voice": "குரல்",
+    "sms": "SMS",
+    "lms": "LMS",
+    "home_schooling_wfh": "வீட்டில் கற்றல் & வேலை",
+    "usage_format": "{{used}} பயன்படுத்தப்பட்டது {{limit}} GB இலிருந்து",
+    "not_available": "இல்லை"
+  },"broadband_nav": {
+    "my_package": "என் தொகுப்பு",
+    "data": "தரவு",
+    "voice": "குரல்",
+    "sms": "SMS",
+    "lms": "LMS",
+    "home_schooling_wfh": "வீட்டில் கற்றல் & வேலை",
+    "usage_format": "{{used}} பயன்படுத்தப்பட்டது {{limit}} GB இலிருந்து",
+    "not_available": "இல்லை"
+  },"My Profile": "எனது சுயவிவரம்",
+  "You are logged in as a EasyLogin": "நீங்கள் EasyLogin ஆக உள்நுழைந்துள்ளீர்கள்",
+  "Enter Your Mobile": "உங்கள் மொபைல் எண்ணை உள்ளிடவும்",
+  "Name": "பெயர்",
+  "Update": "புதுப்பி",
+  "Confirm Deletion": "நீக்கத்தை உறுதிப்படுத்தவும்",
+  "Are you sure you want to delete your profile? This action cannot be undone.": "உங்கள் சுயவிவரத்தை நீக்க விரும்புகிறீர்கள் என்பதை உறுதிப்படுத்துகிறீர்களா? இந்த செயலை மீட்டெடுக்க முடியாது.",
+  "No": "இல்லை",
+  "Yes": "ஆம்",
+  "Profile successfully terminated.": "சுயவிவரம் வெற்றிகரமாக நீக்கப்பட்டது.",
+  "Failed to terminate the profile.": "சுயவிவரத்தை நீக்க முடியவில்லை.", "no_peo_tv_connection": "PEO டிவி இணைப்பு இல்லை",
+  "no_peo_tv_message": "உங்களிடம் PEO டிவி இணைப்பு இல்லை போல் தெரிகிறது. ஒன்றை கோரலாம்!",
+  "close": "மூடு",
+  "request_now": "இப்போது கோருங்கள்",
+  "service_id": "சேவை அடையாள எண்",
+  "status": "நிலை",
+  "no_data": "காண்பிக்க தரவு இல்லை","callForwarding": {
+    "title": "அழைப்பை மாற்றுதல்",
+    "yourNumber": "உங்கள் எண்",
+    "forwardingNumber": "மாற்றப்பட வேண்டிய எண்",
+    "enterPlaceholder": "மாற்றப்பட வேண்டிய எண்ணை உள்ளிடவும்",
+    "terms": "பொது விதிமுறைகள் மற்றும் நிபந்தனைகளுக்கு நான் ஒப்புக்கொள்கிறேன்",
+    "subscribe": "சேர",
+    "statusFailed": "அழைப்பை மாற்றும் நிலை தோல்வியுற்றது",
+    "statusSuccess": "அழைப்பை மாற்றும் கோரிக்கை வெற்றிகரமாக உள்ளது",
+    "unknownStatus": "API இலிருந்து தெரியாத நிலை கிடைத்தது",
+    "apiUnavailable": "மன்னிக்கவும், சேவை தற்போது கிடைக்கவில்லை. தயவு செய்து பிறகு முயற்சிக்கவும்",
+    "enterNumber": "தயவுசெய்து மாற்றப்பட வேண்டிய எண்ணை உள்ளிடவும்.",
+    "activated": "அழைப்பை மாற்றுதல் வெற்றிகரமாக செயல்படுத்தப்பட்டது.",
+    "cancelled": "அழைப்பை மாற்றுதல் வெற்றிகரமாக ரத்து செய்யப்பட்டது.",
+    "failedRequest": "கோரிக்கையை செயலாக்க முடியவில்லை.",
+    "serviceFine": "சேவை நன்றாக இயங்குகிறது.",
+    "ok": "சரி"
+  },"loginOrSignup": {
+    "login": "உள்நுழைவு",
+    "signup": "பதிவு செய்ய",
+    "loginImageAlt": "உள்நுழைவு படக்காட்சி"
+  }, "packageActivation": {
+    "fetchError": "தொகுப்புகளைப் பெறுவதில் தோல்வி: {{error}}",
+    "validity": "செல்லுபடியாகும்",
+    "activateNow": "இப்போதே செயல்படுத்து",
+    "confirmTitle": "தொகுப்பு செயல்படுத்தலை உறுதிப்படுத்தவும்",
+    "confirmMessage": "நீங்கள் செயல்படுத்தப் போகிறீர்கள்:",
+    "details": "விவரங்கள்",
+    "confirmButton": "செயல்படுத்தலை உறுதிப்படுத்தவும்"
+  },
+  "com": {
+    "gb": "GB",
+    "rs": "ரூ.",
+    "withTax": "வரியுடன்",
+    "days": "நாட்கள்",
+    "cancel": "ரத்து செய்"
+  },
+  "me": {
+    "dataAddOns": "தரவு சேர்க்கைகள்"
+  },"packages": {
+    "mainMenu": "முதன்மை தொகுப்புகள்",
+    "errors": {
+      "fetchFailed": "தொகுப்புகளைப் பெறுவதில் தோல்வி: {{error}}"
+    },
+    "validity": "செல்லுபடியாகும் காலம்",
+    "activateNow": "இப்போதே செயல்படுத்து",
+    "confirmActivation": "தொகுப்பை செயல்படுத்த உறுதிப்படுத்தவும்",
+    "activateConfirmation": "நீங்கள் செயல்படுத்தப் போகிறீர்கள்:",
+    "details": "விவரங்கள்",
+    "confirmButton": "செயல்படுத்துவதை உறுதிப்படுத்தவும்"
+  },
+  "co": {
+    "currency": "ரூ.",
+    "withTax": "வரி உட்பட",
+    "days": "நாட்கள்",
+    "cancel": "ரத்துசெய்"
+  },"broadband": {
+    "status": "நிலை",
+    "username": "பயனர் பெயர்",
+    "dataUsage": "பயன்படுத்தப்பட்டது {{used}} GB / மொத்தம் {{total}} GB",
+    "validTill": "செல்லுபடியாகும் வரை",
+    "noData": "காண்பிக்க தரவு இல்லை",
+    "mainPackage": "முதன்மை தொகுப்பு",
+    "dataAddons": "தரவு கூடுதல்",
+    "getMainPackage": "முதன்மை தொகுப்பைப் பெறவும்",
+    "getDataAddons": "தரவு கூடுதல்களைப் பெறவும்",
+    "loading": "ஏற்றுகிறது...",
+    "watermarkAlt": "நீர் முத்திரை லோகோ"
+  },"transactions": {
+    "title": "பணப்பரிவர்த்தனை வரலாறு",
+    "from": "இருந்து:",
+    "to": "வரை:",
+    "search": "தேடல்",
+    "searching": "தேடப்படுகிறது...",
+    "error_loading": "பணப்பரிவர்த்தனை வரலாறை ஏற்ற முடியவில்லை. பின்னர் முயற்சிக்கவும்.",
+    "no_results": "தேர்ந்தெடுக்கப்பட்ட காலத்திற்கான எந்தப் பரிவர்த்தனைகளும் இல்லை",
+    "invalid_date": "தொடக்க தேதி முடிவு தேதிக்கு பின் இருக்க முடியாது",
+    "table": {
+      "date": "தேதி",
+      "time": "நேரம்",
+      "status": "நிலை",
+      "amount": "தொகை",
+      "success": "வெற்றிகரமானது",
+      "failed": "தோல்வியடைந்தது"
+    }
+  }, "vod": {
+    "noServiceTitle": "வீடியோ டிமாண்ட் சேவை இல்லை",
+    "noServiceMessage": "உங்களுக்கு VOD சேவையில் சந்தா இல்லை. இப்போது சந்தா செலுத்தவும்!",
+    "subscribeNow": "இப்போது சந்தா செலுத்தவும்",
+    "serviceID": "சேவை அடையாள எண்",
+    "status": "நிலை",
+    "noVideos": "வீடியோக்கள் இல்லை"
+  },
+  "c": {
+    "close": "மூடு"
+  },  "usage": {
+    "title": " பயன்பாட்டின் விவரங்கள் ",
+    "basePackage": "அடிப்படை தொகுப்பு",
+    "extraGB": "கூடுதல் GB",
+    "loyalty": "நம்பிக்கையாளர் சலுகை",
+    "vas": "VAS",
+    "totalUsage": "மொத்த பயன்பாடு - {{amount}}{{unit}}",
+    "noData": "தரவு இல்லை",
+    "legend": {
+      "pd": "PD - உச்ச பதிவிறக்கம்",
+      "pu": "PU - உச்ச பதிவேற்றம்",
+      "od": "OD - பிக்சன் வெளியே பதிவிறக்கம்",
+      "ou": "OU - பிக்சன் வெளியே பதிவேற்றம்"
+    }
+  }, "dailyUsage": {
+    "title": "தினசரி பயன்பாடு",
+    "currentMonth": "தற்போதைய மாதம்",
+    "lastMonth": "கடந்த மாதம்",
+    "twoMonthsAgo": "இரண்டு மாதங்களுக்கு முன்",
+    "fetchError": "தினசரி பயன்பாட்டு தரவைப் பெறுவதில் பிழை:",
+    "basePackage": "அடிப்படை தொகுப்பு",
+    "extraGB": "கூடுதல் ஜிபி",
+    "loyalty": "விசுவாசம்",
+    "vas": "VAS",
+    "date": "தேதி",
+    "totalUsage": "மொத்த பயன்பாடு",
+    "usage": "பயன்பாடு",
+    "report": "அறிக்கை",
+    "viewDetailedUsage": "விரிவான பயன்பாட்டைக் காண்க"
+  },
+  "common": {
+    "loading": "தரவு ஏற்றுகிறது...",
+    "inGB": "ஜிபியில்",
+    "noData": "தரவு இல்லை",
+    "noDataAvailable": "தரவு இல்லை",
+    "more": "மேலும்",
+    "view": "காண்க", "detailedUsageDetails": "விரிவான பயன்பாட்டு விவரங்கள்",
+    "protocolReport": "ப்ரோட்டோகால் அறிக்கை",
+    "subscription": "சந்தா"
+  }, "changeContactInfo": "தொடர்பு விவரங்களை மாற்றவும்",
+  "fullName": "முழு பெயர்",
+  "emailAddress": "மின்னஞ்சல் முகவரி",
+  "mobile": "மொபைல் எண்",
+  "submit": "சமர்ப்பிக்கவும்",
+  "notification": "அறிவிப்பு",
+  "fillAllFields": "தயவுசெய்து அனைத்து புலங்களையும் சரியாக நிரப்பவும்",
+  "updateSuccess": "தொடர்பு வெற்றிகரமாக புதுப்பிக்கப்பட்டது",
+  "updateFailed": "தொடர்பு புதுப்பிக்க முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+  "updateError": "தொடர்பு புதுப்பிக்கும்போது பிழை ஏற்பட்டது. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+  "ok": "சரி", "unsubscribeTitle": " விரிவான அறிக்கைகளுக்கான சந்தாவை நிறுத்தவும் ",
+  "unsubscribeText": "பயன்பாடு அறிக்கையை சந்தாவை நிறுத்தவும்",
+  "submit": "சமர்ப்பிக்கவும்", "changePasswordTitle": "பிராட்பேண்ட் கடவுச்சொல்லை மாற்றவும்",
+  "currentPassword": "தற்போதைய கடவுச்சொல்",
+  "newPassword": "புதிய கடவுச்சொல்",
+  "confirmPassword": "கடவுச்சொல்லை உறுதிப்படுத்தவும்",
+  "updatePassword": "கடவுச்சொல்லை புதுப்பிக்கவும்", "on": "தேதி", "go": "போ","promotion_title": " விளம்பரம் ",
+  "loading_promotions": "விளம்பரங்களை ஏற்றுகிறது...",
+  "error_fetching_promotions": "விளம்பரங்களை பெற முடியவில்லை.",
+  "no_promotions": "இந்த எண்ணிற்கு விளம்பரங்கள் இல்லை.",
+  "activated": "செயல்படுத்தப்பட்டது",
+  "activate": "செயல்படுத்து",
+  "promotion_activation": "விளம்பரம் செயல்படுத்தல்",
+  "close": "மூடு","detailedUsage": {
+    "title": "பயன்பாடு விவரங்கள்",
+    "basePackage": "அடிப்படை தொகுப்பு",
+    "extraGB": "கூடுதல் GB",
+    "loyalty": "நம்பிக்கை",
+    "vas": "VAS சேவைகள்",
+    "totalUsage": "மொத்த பயன்பாடு",
+    "noData": "தகவல் இல்லை",
+    "pd": "PD - உச்ச நேர பதிவிறக்கம்",
+    "pu": "PU - உச்ச நேர பதிவேற்றம்",
+    "od": "OD - அனுசரண நேர பதிவிறக்கம்",
+    "ou": "OU - அனுசரண நேர பதிவேற்றம்"
+  },"protocol": {
+  "total": "மொத்தம்",
+  "download": "பதிவிறக்கம்",
+  "upload": "பதிவேற்றம்",
+  "dateUsage": "தேதிக்கான தரவுப் பயன்பாடு"
+},"fiberRequest": {
+    "title": "SLT ஃபைபர் ஹோம் லைன்"
+  },"newServices": {
+    "title": "புதிய சேவைகள்",
+    "fiber": "ஃபைபர்",
+    "megaline": "மேகலைன்",
+    "4glte": "4G LTE"
+  },"firstName": "முதல் பெயர்",
+  "lastName": "இறுதி பெயர்",
+  "nic": "அடையாள அட்டை எண்",
+  "mobileNumber": "கைபேசி எண்",
+  "submit": "சமர்ப்பிக்கவும்",
+  "success": "வெற்றி",
+  "error": "பிழை",
+  "newConnectionCreated": "புதிய இணைப்பு வெற்றிகரமாக உருவாக்கப்பட்டது.",
+  "unexpectedError": "எதிர்பாராத பிழை ஏற்பட்டுள்ளது.", "requestNow": "இப்போது கோரிக்கை செய்யவும்",
+  "fiberOnTheWay": "ஃபைபர் வருவதாக உள்ளது", "currentMonth": "தற்போதைய மாதம்",
+  "dailyUsage": "தினசரி பயன்பாடு",
+  "loadingData": "தரவு ஏற்றப்படுகிறது...",
+  "basePackage": "அடிப்படை தொகுப்பு",
+  "extraGB": "மேலதிக GB",
+  "loyalty": "நம்பிக்கையாளர்",
+  "vas": "VAS",
+  "date": "தேதி",
+  "totalUsage": "மொத்த பயன்பாடு",
+  "usage": "பயன்பாடு",
+  "report": "அறிக்கை",
+  "viewDetailedUsage": "விரிவான பயன்பாட்டைப் பார்க்கவும்",
+  "noData": "தரவு இல்லை",
+  "more": "மேலும்",
+  "view": "பார்க்கவும்",
+  "noDataAvailable": "தரவு இல்லை", "complaints": {
+    "title": "புகார்கள்",
+    "noFaultsFound": "எந்த குறைகளும் இல்லை.",
+    "failedToFetch": "குறைப்பட்டியலை பெற முடியவில்லை.",
+    "failedToFetchTryAgain": "குறைப்பட்டியலை பெற முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+    "serviceName": "சேவை பெயர்",
+    "faultRef": "குறை குறிப்பு எண்",
+    "status": "நிலை",
+    "date": "தேதி",
+    "submitButton": "உங்கள் புகாரை சமர்ப்பிக்கவும்"
+  },
+  "common": {
+    "loading": "ஏற்றப்படுகிறது..."
+  },"add_complaints": {
+    "title": "புகார் சமர்ப்பிக்கவும்",
+    "serviceType": "சேவை வகை",
+    "contactNumber": "தொடர்பு எண்",
+    "complaintDescription": "புகார் விவரம்",
+    "mapPlaceholder": "தேவையானால் இடத்தைத் தேர்ந்தெடுக்கவும்",
+    "submitBtn": "சமர்ப்பிக்கவும்",
+    "validationError": "தயவுசெய்து தேவையான அனைத்து வயது நிரப்பவும்.",
+    "success": "புகார் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!",
+    "unknownError": "அறியப்படாத பிழை ஏற்பட்டது",
+    "unexpectedError": "ஒரு எதிர்பாராத பிழை ஏற்பட்டது",
+    "services": {
+      "all": "அனைத்தும்",
+      "broadband": "ப்ரோட்பேண்ட்",
+      "peotv": "பீஓடிவி",
+      "voice": "ஒலி"
+    }
+  },
+  "common": {
+    "success": "வெற்றி",
+    "error": "பிழை",
+    "ok": "சரி"
+  },"addComplaints": {
+    "title": "புகாரை சமர்ப்பிக்கவும்",
+    "serviceType": "சேவை வகை",
+    "contactNumber": "தொலைபேசி எண்",
+    "description": "புகார் விவரம்",
+    "location": "இருப்பிடத்தை உள்ளிடவும்",
+    "all": "அனைத்தும்",
+    "broadband": "ப்ராட்பேண்ட்",
+    "peotv": "PeoTV",
+    "voice": "ஒலி",
+    "submit": "சமர்ப்பிக்கவும்",
+    "success": "வெற்றி",
+    "error": "பிழை",
+    "ok": "சரி",
+    "validationError": "தயவுசெய்து தேவையான எல்லா புலங்களையும் நிரப்பவும்.",
+    "submitSuccess": "புகார் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!",
+    "submitFailure": "予期せぬエラーが発生しました。"
+  }, "currency": "ரூ."
+
+
+
+
+}
