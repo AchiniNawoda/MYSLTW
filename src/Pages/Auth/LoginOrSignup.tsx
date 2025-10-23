@@ -86,7 +86,7 @@ const LoginOrSignup = () => {
               borderRadius: "20px",
               boxShadow: "0px 3px 3px #0056A260",
               display:
-                selectedTab === "forgetPassword" || selectedTab === "otp"
+                selectedTab === "forgetPassword" || selectedTab === "otp" || selectedTab === "registerotp"
                   ? "none"
                   : "flex",
               alignItems: "center",

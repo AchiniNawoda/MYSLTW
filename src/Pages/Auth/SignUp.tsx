@@ -29,6 +29,7 @@ const Signup = ({ onSelectTab }: SignupProps) => {
   const [loading, setLoading] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [termsAccepted, setTermsAccepted] = useState(false); // For terms and conditions acceptance
   const [termsDialogOpen, setTermsDialogOpen] = useState(false); // For terms dialog
@@ -97,6 +98,10 @@ const Signup = ({ onSelectTab }: SignupProps) => {
     setShowPassword((prev) => !prev);
   };
 
+  const toggleConfirmPasswordVisibility = () => {
+  setShowConfirmPassword((prev) => !prev);
+};
+ 
   const handleOpenTermsDialog = () => {
     setTermsDialogOpen(true);
   };
@@ -223,7 +228,7 @@ const Signup = ({ onSelectTab }: SignupProps) => {
         <TextField
           fullWidth
           sx={textFieldStyles}
-          type={showPassword ? "text" : "password"}
+          type={showConfirmPassword ? "text" : "password"}
           variant="outlined"
           margin="normal"
           value={confirmPassword}
@@ -235,10 +240,10 @@ const Signup = ({ onSelectTab }: SignupProps) => {
               <InputAdornment position="end">
                 <IconButton
                   aria-label={t("signup.togglePasswordVisibility")}
-                  onClick={togglePasswordVisibility}
+                  onClick={toggleConfirmPasswordVisibility}
                   edge="end"
                 >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                  {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
                 </IconButton>
               </InputAdornment>
             ),
