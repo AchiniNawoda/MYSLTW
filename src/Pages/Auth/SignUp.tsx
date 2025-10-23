@@ -210,7 +210,7 @@ const Signup = ({ onSelectTab }: SignupProps) => {
                   onClick={togglePasswordVisibility}
                   edge="end"
                 >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                  {showPassword ? <Visibility /> : <VisibilityOff />}
                 </IconButton>
               </InputAdornment>
             ),

@@ -46,9 +46,11 @@ const SocialMediaLoginInner = () => {
         });
 
         console.log("Google user info:", res.data);
-        navigate("/home");
+        //navigate("/home");
       } catch (err) {
         console.error("Google user info fetch error:", err);
+      } finally {
+        navigate("/home");
       }
     },
     onError: (error) => {

@@ -4,6 +4,12 @@
     "sinhala": "සිංහල",
     "tamil": "தமிழ்"
   },
+
+  "greeting": {
+    "morning": "Good morning",
+    "afternoon": "Good afternoon",
+    "evening": "Good evening"
+  },
  
   "socialLogin": {
     "orSignInWith": "Or sign in with",

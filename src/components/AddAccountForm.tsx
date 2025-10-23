@@ -21,6 +21,7 @@ import { textFieldStyle } from "../assets/Themes/CommonStyles";
 import addAccountPrepaid from "../services/addAccount/addAccountPrepaid";
 import addAccountRequest from "../services/addAccount/addAccountRequest"; // Import the addAccountRequest function
 import vasAccountRequest from "../services/addAccount/vasAccountRequest";
+import { useNavigate } from "react-router-dom";
 
 const AddAccountForm: React.FC = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -35,6 +36,7 @@ const AddAccountForm: React.FC = () => {
   });
   const [message, setMessage] = useState<string | null>(null); // message for dialog
   const [openDialog, setOpenDialog] = useState(false); // Dialog open state
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -58,6 +60,10 @@ const AddAccountForm: React.FC = () => {
         // Success
         setMessage("Account successfully added!");
         setOpenDialog(true);
+
+
+        //Navigate to home or refresh account list here if needed
+        navigate("/home");
 
 
       } catch (error) {
@@ -85,6 +91,11 @@ const AddAccountForm: React.FC = () => {
           setMessage("Account successfully added!");
           setOpenDialog(true);
 
+        
+        //Navigate to home or refresh account list here if needed
+        navigate("/home");
+
+
       } catch (error) {
         console.error("API Request failed:", error);
       }
@@ -105,6 +116,9 @@ const AddAccountForm: React.FC = () => {
 
           setMessage("Account successfully added!");
           setOpenDialog(true);
+
+        //Navigate to home or refresh account list here if needed
+        navigate("/home");
 
       } catch (error) {
         console.error("API Request failed:", error);

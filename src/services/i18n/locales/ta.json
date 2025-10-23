@@ -5,6 +5,13 @@
     "sinhala": "සිංහල",
     "tamil": "தமிழ்"
   },
+
+  "greeting": {
+    "morning": "காலை வணக்கம்",
+    "afternoon": "மதிய வணக்கம்",
+    "evening": "மாலை வணக்கம்"
+  },
+  
   "socialLogin": {
     "orSignInWith": "அல்லது பின்வருமாறு உள்நுழையவும்",
     "googleLogin": "Google உள்நுழைதல்",

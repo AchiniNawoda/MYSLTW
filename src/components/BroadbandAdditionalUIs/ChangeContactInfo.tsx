@@ -63,14 +63,15 @@ const ChangeContactForm = () => {
         color: "#0056A2",
         padding: 2,
         borderRadius: "10px",
-        height: "65vh",
+        minHeight: "65vh",
         boxShadow: "0px 3px 3px #0000004A",
+        boxSizing: "border-box",
       }}
     >
       <Typography
         variant="body2"
         align="center"
-        sx={{ fontSize: "24px", fontWeight: "bold", marginBottom: 4 }}
+        sx={{ fontSize: "24px", fontWeight: "bold", marginBottom: 3, marginTop: 1 }}
       >
         {t("changeContactInfo")}
       </Typography>
@@ -87,18 +88,22 @@ const ChangeContactForm = () => {
           width: "95%",
           height: "85%",
           position: "relative",
+          boxSizing: "border-box",
+          paddingLeft: 4,
+          paddingRight: 4,
         }}
       >
         <Card
           sx={{
-            height: "85%",
-            width: "30%",
+            height: "100%",
+            width: "100%",
             border: "1px solid #0056A2",
             padding: "16px",
             borderRadius: "12px",
             display: "flex",
             flexDirection: "column",
             gap: 2,
+            margin: "5%",
           }}
         >
           {/* Full Name */}

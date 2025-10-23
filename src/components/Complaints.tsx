@@ -62,13 +62,14 @@ const Complaints = () => {
         padding: 1,
         borderRadius: "10px",
         boxShadow: "0px 3px 3px #0000004A",
-        height: "60vh",
+        minHeight: "60vh",
+        boxSizing: "border-box",
       }}
     >
       <Typography
         variant="body2"
         align="center"
-        sx={{ fontSize: 24, fontWeight: "bold", marginBottom: "32px" }}
+        sx={{ fontSize: 24, fontWeight: "bold", marginBottom: 2, marginTop: 1 }}
       >
          {t("complaints.title")} 
       </Typography>
@@ -150,7 +151,7 @@ const Complaints = () => {
           setLeftMenuItem("SUBMIT YOUR COMPLAINT");
         }}
       >
-        <Typography variant="body2" sx={{ fontSize: "20px" }}>
+        <Typography variant="body2" sx={{ fontSize: "1rem" }}>
           {t("complaints.submitButton")}
         </Typography>
       </Button>

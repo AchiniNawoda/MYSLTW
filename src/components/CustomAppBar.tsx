@@ -21,10 +21,14 @@ import useStore from "../services/useAppStore";
 import { AccountDetails } from "../types/types";
 import MySLTMenu from "./ProfileMenuUIs/MySLTMenu";
 import { MdNotifications } from 'react-icons/md';
+import { useTranslation } from "react-i18next";
+
 
 const CustomAppBar = () => {
   const { fetchServiceDetails, setSelectedTelephone, setLeftMenuItem } = useStore();
   const userImage = "https://mysltimages.s3.eu-north-1.amazonaws.com/profile.jpg";
+
+  const { t } = useTranslation();
 
   const [account, setAccount] = useState("");
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -74,9 +78,9 @@ const CustomAppBar = () => {
   // Greeting based on time
   const getGreeting = () => {
     const hour = new Date().getHours();
-    if (hour < 12) return "Good morning";
-    if (hour < 18) return "Good afternoon";
-    return "Good evening";
+    if (hour < 12) return t("greeting.morning");
+    if (hour < 18) return t("greeting.afternoon");
+    return t("greeting.evening");
   };
 
   // Notification count (can be dynamic)

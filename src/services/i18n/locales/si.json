@@ -4,6 +4,13 @@
     "sinhala": "සිංහල",
     "tamil": "தமிழ்"
   },
+
+  "greeting": {
+    "morning": "සුභ උදෑසනක්",
+    "afternoon": "සුභ දහවලක්",
+    "evening": "සුභ සැන්දෑවක්"
+  },
+
    "socialLogin": {
     "orSignInWith": "හෝ පහත ආකාරයෙන් ඇතුල් වන්න",
     "googleLogin": "ගූගල් ඇතුල්වීම",

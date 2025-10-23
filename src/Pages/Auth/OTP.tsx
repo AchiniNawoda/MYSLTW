@@ -187,37 +187,39 @@ const OTPPage = ({ onSelectTab }: OTPProps) => {
             {error}
           </Alert>
         )}
-{timeLeft > 0 && (
-  <Typography variant="body2" sx={{ color: "#0056A2", mb: 2 }}>
-    Time remaining: {formatTime(timeLeft)}
-  </Typography>
-)}
-
-{attemptsLeft > 0 && (
-  <Typography variant="body2" sx={{ color: "#0056A2", mb: 2 }}>
-    Attempts left: {attemptsLeft}
-  </Typography>
-)}
-<Button
-  onClick={handleResendOtp}
-  variant="contained"   // use contained so it looks like a real button
-  disabled={timeLeft > 0}
-  sx={{
-    mb: 2,
-    borderRadius: 15,
-    height: "40px",
-    width: "160px",
-    textTransform: "capitalize",
-    backgroundColor: timeLeft > 0 ? "#A4A4AA" : "#0056A2",
-    "&:hover": {
-      backgroundColor: timeLeft > 0 ? "#A4A4AA" : "#004080",
-    },
-  }}
->
-  Resend OTP
-</Button>
 
 
+        {timeLeft > 0 && (
+          <Typography variant="body2" sx={{ color: "#0056A2", mb: 2 }}>
+            Time remaining: {formatTime(timeLeft)}
+          </Typography>
+        )}
+
+        {attemptsLeft > 0 && (
+          <Typography variant="body2" sx={{ color: "#0056A2", mb: 2 }}>
+            Attempts left: {attemptsLeft}
+          </Typography>
+        )}
+
+
+        <Button
+          onClick={handleResendOtp}
+          variant="contained"   // use contained so it looks like a real button
+          disabled={timeLeft > 0}
+          sx={{
+            mb: 2,
+            borderRadius: 15,
+            height: "40px",
+            width: "160px",
+            textTransform: "capitalize",
+            backgroundColor: timeLeft > 0 ? "#A4A4AA" : "#0056A2",
+            "&:hover": {
+              backgroundColor: timeLeft > 0 ? "#A4A4AA" : "#004080",
+            },
+          }}
+        >
+          Resend OTP
+        </Button>
 
 
         <Box
