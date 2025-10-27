@@ -54,7 +54,7 @@ export const userLogin = async (
       );
     } else {
       console.error("Error during login:", error);
-      alert("Invalid username or password.");
+      alert("Error in login: "+ error);
     }
 
     return { success: false }; // Return failure on error
