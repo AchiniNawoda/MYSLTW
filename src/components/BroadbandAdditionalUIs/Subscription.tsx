@@ -195,19 +195,25 @@ if (selectedPaymentOption === 0) {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        height: "500px",
+        minHeight: "500px",
         backgroundColor: "white",
         borderRadius: 3,
+        padding: 1,
+        boxSizing: "border-box",
       }}
     >
       <Box
         sx={{
           position: "relative",
-          width: "85%",
-          height: "85%",
+          //width: "100%",
+          //height: "85%",
           border: "2px solid #0056A2",
           borderRadius: 3,
-          padding: 3,
+          padding: 2,
+          margin: 1,
+          width: { xs: "85%", sm: "80%", md: "80%", lg: "100%" },
+          height: "auto",
+          minHeight: "400px",
         }}
       >
         {pageLoading ? (
@@ -229,10 +235,11 @@ if (selectedPaymentOption === 0) {
             <Typography
               variant="body2"
               sx={{
-                fontSize: "22px",
+                fontSize: "1.2rem",
                 color: "#0056A2",
                 fontWeight: "bold",
                 marginBottom: 3,
+                marginTop: 1,
                 textAlign: "center",
               }}
             >
@@ -255,7 +262,7 @@ if (selectedPaymentOption === 0) {
                   }}
                   key={index}
                   sx={{
-                    width: "48%",
+                    width: "50%",
                     height: "125px",
                     border:
                       selectedSubscriptionIndex === index
@@ -268,9 +275,15 @@ if (selectedPaymentOption === 0) {
                     color: "#0056A2",
                     fontWeight: "bold",
                     fontSize: "18px",
-                    backgroundColor: "white",
+                    backgroundColor: 
+                      selectedSubscriptionIndex === index
+                        ? "#F5F9FF"
+                        : "white",
                     flexDirection: "column",
                     gap: 2,
+                    padding: 1,
+                    margin: 1,
+                    cursor: "pointer",
                   }}
                 >
                   {index === 0 ? (
@@ -278,7 +291,7 @@ if (selectedPaymentOption === 0) {
                   ) : (
                     <EventIcon sx={{ fontSize: 32, color: "#0056A2" }} />
                   )}
-                  <Typography variant="body2">{option.packagename}</Typography>
+                  <Typography variant="body2" sx={{textAlign: "center"}}>{option.packagename}</Typography>
                 </Box>
               ))}
             </Box>
@@ -295,12 +308,13 @@ if (selectedPaymentOption === 0) {
                 justifyContent: "space-between",
                 alignItems: "center",
                 gap: 2,
+                flexDirection: {xs: "column", md: "row"}
               }}
             >
               <Typography
                 variant="body2"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {xs: "0.8rem" ,md:"1rem"},
                   color: "#0056A2",
                 }}
               >
@@ -315,7 +329,7 @@ if (selectedPaymentOption === 0) {
               </Typography>
 
               {/* Payment Options */}
-              <Box sx={{ display: "flex", gap: 2, zIndex: 2 }}>
+              <Box sx={{ display: "flex", gap: 2, zIndex: 2, }}>
                 {/* Add to Bill Image */}
                 <img
                   src={AddToBillImage}
@@ -362,6 +376,8 @@ if (selectedPaymentOption === 0) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
+                  flexDirection: {xs: "column", md: "row"},
+                  gap: 2,
                 }}
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -408,7 +424,9 @@ if (selectedPaymentOption === 0) {
                     color: "#0056A2",
                     textTransform: "none",
                     fontSize: "16px",
-                    padding: "6px 30px",
+                    //padding: "6px 30px",
+                    width: {xs: "50%", md:"150px"},
+                    height: "40px",
                     borderRadius: "18px",
                     "&:hover": {
                       backgroundColor: "#0056A2",

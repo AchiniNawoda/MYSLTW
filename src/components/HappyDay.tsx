@@ -19,7 +19,7 @@ import useStore from "../services/useAppStore"; // Import useStore
 const HappyDay: React.FC = () => {
   const { t } = useTranslation();
 
-  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(dayjs());
+  const [selectedDate, setSelectedDate] = useState<Dayjs | null>(dayjs().add(2, 'day'));
   const [dialogOpen, setDialogOpen] = useState(false);
   const [apiResponse, setApiResponse] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -277,7 +277,8 @@ const HappyDay: React.FC = () => {
           </Box>
 
           {/* Right Column - Calendar */}
-          <Box
+
+          {/* <Box
             sx={{
               //display: "flex",
               //flexDirection: "row",
@@ -299,7 +300,37 @@ const HappyDay: React.FC = () => {
                 disablePast
               />
             </LocalizationProvider>
+          </Box> */}
+
+          <Box
+            sx={{
+              //width: "100%",
+              width: { xs: "100%", lg: "50%" }, // Full width on mobile, half on desktop
+              display: "flex",
+              justifyContent: "center",
+              borderRadius: "10px",
+              padding: "5px",
+              border: "2px solid #0056A273",
+              boxSizing: "border-box",
+              overflow: "hidden",
+            }}
+          >
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <StaticDatePicker
+                displayStaticWrapperAs="desktop"
+                value={selectedDate}
+                onChange={handleDateChange}
+                disablePast
+                sx={{
+                  "& .MuiDateCalendar-root": {
+                    width: "100%",
+                    maxWidth: "330px", // prevents overflow
+                  },
+                }}
+              />
+            </LocalizationProvider>
           </Box>
+
         </Box>
       </Box>
     </>
