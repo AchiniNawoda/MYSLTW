@@ -227,7 +227,10 @@ const MenuLeft: React.FC = () => {
               </ListItemText>
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+
+          {/* Uncomment the following block if "Change Contact Information" menu item is needed in the future */}
+
+          {/* <ListItem disablePadding>
             <ListItemButton
               onClick={() => {
                 handleClose();
@@ -247,7 +250,7 @@ const MenuLeft: React.FC = () => {
                 </Typography>
               </ListItemText>
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
         </List>
       </Popover>
     </Box>
