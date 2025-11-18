@@ -45,7 +45,8 @@
       "invalidInput": "Please enter a valid email or 10-digit mobile number.",
       "registrationFailed": "Registration failed",
       "generic": "An error occurred while registering",
-      "acceptTerms": "You must accept the Terms and Conditions to proceed"
+      "acceptTerms": "You must accept the Terms and Conditions to proceed",
+      "weakPassword": "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
     },
     "acceptTerms": {
       "prefix": "I agree to the ",
@@ -56,6 +57,14 @@
       "content": "By signing up, you agree to our Terms and Conditions and Privacy Policy.",
       "cancel": "Cancel",
       "accept": "Accept"
+    },
+    "passwordPolicy": {
+      "title": "Password must have:",
+      "minLength": "At least 8 characters",
+      "uppercase": "An uppercase letter (A-Z)",
+      "lowercase": "A lowercase letter (a-z)",
+      "number": "A number (0-9)",
+      "specialChar": "A special character (!@#$%^&*)"
     }
   }, "forgetPassword": {
     "title": "Forgot Password?",

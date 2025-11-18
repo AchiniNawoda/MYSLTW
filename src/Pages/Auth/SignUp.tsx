@@ -1,5 +1,7 @@
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CancelIcon from "@mui/icons-material/Cancel";
 import {
   Box,
   Button,
@@ -9,6 +11,8 @@ import {
   TextField,
   Typography,
   Checkbox,
+  Tooltip,
+  Alert,
 } from "@mui/material";
 import React, { useState } from "react";
 import registerUser from "../../services/register/register";
@@ -33,9 +37,12 @@ const Signup = ({ onSelectTab }: SignupProps) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [termsAccepted, setTermsAccepted] = useState(false); // For terms and conditions acceptance
   const [termsDialogOpen, setTermsDialogOpen] = useState(false); // For terms dialog
+  const [passwordTouched, setPasswordTouched] = useState(false); // For password field touched state
+  const [confirmPasswordError, setConfirmPasswordError] = useState<string | null>(null); // For confirm password error message
 
   const { setOtpState } = useStore();
 
+  // Determine if input is email or mobile
   const determineUserType = (input: string): string => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{10}$/;
@@ -44,12 +51,142 @@ const Signup = ({ onSelectTab }: SignupProps) => {
     return "UNKNOWN";
   };
 
+  // Password strength checker
+  const getPasswordStrength = (pwd: string) => {
+    const checks = {
+      length: pwd.length >= 8,
+      uppercase: /[A-Z]/.test(pwd),
+      lowercase: /[a-z]/.test(pwd),
+      number: /[0-9]/.test(pwd),
+      special: /[!@#$%^&*(),.?":{}|<>]/.test(pwd),
+    };
+
+    const passedCount = Object.values(checks).filter(Boolean).length;
+    return { checks, passedCount, total: 5 };
+  };
+
+  // Validate password against all criteria
+  const validatePassword = (pwd: string): boolean => {
+    const { checks } = getPasswordStrength(pwd);
+    return Object.values(checks).every(Boolean);
+  };
+
+  const getPasswordTooltipContent = () => {
+    if (!password) return null;
+
+    const { checks } = getPasswordStrength(password);
+
+    return (
+      <Box sx={{p: 0.5}}>
+        <Typography variant="caption" sx={{ fontWeight: "bold", display: "block", mb: 0.5 }}>
+          {t("signup.passwordPolicy.title")}
+        </Typography>
+
+        {/* Length check */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mb: 0.3 }}>
+          {checks.length ? (
+            // <CheckCircleIcon sx={{ fontSize: 14, color: "#4caf50" }} />
+            <CheckCircleIcon fontSize="small" sx={{ color: "green", mr: 0.5 }} />
+          ) : (
+            // <CancelIcon sx={{ fontSize: 14, color: "#f44336" }} />
+            <CancelIcon fontSize="small" sx={{ color: "red", mr: 0.5 }} />
+          )}
+          <Typography variant="caption">
+            {t("signup.passwordPolicy.minLength")}
+          </Typography>
+        </Box>
+
+        {/* Uppercase check */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mb: 0.3 }}>
+          {checks.uppercase ? (
+            <CheckCircleIcon fontSize="small" sx={{ color: "green", mr: 0.5 }} />
+          ) : (
+            <CancelIcon fontSize="small" sx={{ color: "red", mr: 0.5 }} />
+          )}
+          <Typography variant="caption">
+            {t("signup.passwordPolicy.uppercase")}
+          </Typography>
+        </Box>
+
+        {/* Lowercase check */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mb: 0.3 }}>
+          {checks.lowercase ? (
+            <CheckCircleIcon fontSize="small" sx={{ color: "green", mr: 0.5 }} />
+          ) : (
+            <CancelIcon fontSize="small" sx={{ color: "red", mr: 0.5 }} />
+          )}
+          <Typography variant="caption">
+            {t("signup.passwordPolicy.lowercase")}
+          </Typography>
+        </Box>
+
+        {/* Number check */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mb: 0.3 }}>
+          {checks.number ? (
+            <CheckCircleIcon fontSize="small" sx={{ color: "green", mr: 0.5 }} />
+          ) : (
+            <CancelIcon fontSize="small" sx={{ color: "red", mr: 0.5 }} />
+          )}
+          <Typography variant="caption">
+            {t("signup.passwordPolicy.number")}
+          </Typography>
+        </Box>
+
+        {/* Special character check */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+          {checks.special ? (
+            <CheckCircleIcon fontSize="small" sx={{ color: "green", mr: 0.5 }} />
+          ) : (
+            <CancelIcon fontSize="small" sx={{ color: "red", mr: 0.5 }} />
+          )}
+          <Typography variant="caption">
+            {t("signup.passwordPolicy.specialChar")}
+          </Typography>
+        </Box>
+      </Box>
+    );
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+    setPasswordTouched(true);
+
+    // Clear confirm password error if passwords match
+    if (confirmPassword && newPassword === confirmPassword) {
+      setConfirmPasswordError(null);
+    }
+  };
+
+  const handleConfirmPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newConfirmPassword = e.target.value;
+    setConfirmPassword(newConfirmPassword);
+
+    // Check for mismatch in real-time
+    if (passwordTouched && newConfirmPassword !== password) {
+      setConfirmPasswordError(t("signup.error.passwordMismatch"));
+    } else {
+      setConfirmPasswordError(null);
+    }
+  };
+
+  // Form submission handler
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
+    setErrorMessage(null);
+    setConfirmPasswordError(null);
+
+    // Validate password strength
+    if (!validatePassword(password)) {
+      setErrorMessage(t("signup.error.weakPassword"));
+      setLoading(false);
+      return;
+    }
 
     // Check if passwords match
     if (password !== confirmPassword) {
+      setConfirmPasswordError(t("signup.error.passwordMismatch") || "Passwords do not match!");
       setErrorMessage(t("signup.error.passwordMismatch"));
       setLoading(false);
       return;
@@ -145,6 +282,11 @@ const Signup = ({ onSelectTab }: SignupProps) => {
     },
   };
 
+  // Get password strength for current password
+  const passwordStrength = getPasswordStrength(password);
+  // Check if password is valid
+  const isPasswordValid = validatePassword(password);
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <Typography
@@ -159,11 +301,15 @@ const Signup = ({ onSelectTab }: SignupProps) => {
       >
         {t("signup.title")}
       </Typography>
+
       <form onSubmit={handleSubmit}>
         {errorMessage && (
-          <Typography color="error" variant="body2">
+          <Alert severity="error" sx={{ mb: 2, width: "100%" }}>
             {errorMessage}
-          </Typography>
+          </Alert>
+          // <Typography color="error" variant="body2">
+          //   {errorMessage}
+          // </Typography>
         )}
 
         <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
@@ -194,7 +340,126 @@ const Signup = ({ onSelectTab }: SignupProps) => {
           required
         />
 
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+            {t("signup.password")}
+          </Typography>
+          {passwordTouched && password && (
+            <Tooltip
+              title={getPasswordTooltipContent()}
+              arrow
+              placement="right"
+              componentsProps={{
+                tooltip: {
+                  sx: {
+                    bgcolor: "white",
+                    color: 'rgba(0, 0, 0, 0.87)',
+                    boxShadow: '0px 2px 8px rgba(0,0,0,0.15)',
+                    border: '1px solid #e0e0e0',
+                    '& .MuiTooltip-arrow': {
+                      color: 'white',
+                      '&::before': {
+                        border: '1px solid #e0e0e0',
+                      },
+                    },
+                  },
+                },
+              }}
+              >
+                <Box sx={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: 0.5,
+                  cursor: "pointer",
+                }}>
+                  <Typography 
+                    variant="caption" 
+                    sx={{ 
+                      color: isPasswordValid ? "#4caf50" : "#f44336",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {passwordStrength.passedCount}/{passwordStrength.total}
+                  </Typography>
+                  {isPasswordValid ? (
+                    <CheckCircleIcon sx={{ fontSize: 16, color: "#4caf50" }} />
+                  ) : (
+                    <CancelIcon sx={{ fontSize: 16, color: "#f44336" }} />
+                  )}
+                </Box>
+            </Tooltip>
+          )}
+        </Box>
+        <TextField
+          fullWidth
+          sx={textFieldStyles}
+          type={showPassword ? "text" : "password"}
+          variant="outlined"
+          margin="normal"
+          value={password}
+          placeholder={t("signup.passwordPlaceholder")}
+          onChange={handlePasswordChange}
+          required
+          error={passwordTouched && password.length > 0 && !isPasswordValid}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label={t("signup.togglePasswordVisibility")}
+                  onClick={togglePasswordVisibility}
+                  edge="end"
+                >
+                  {showPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+
         <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+          {t("signup.confirmPassword")}
+        </Typography>
+        <TextField
+          fullWidth
+          sx={textFieldStyles}
+          type={showConfirmPassword ? "text" : "password"}
+          variant="outlined"
+          margin="normal"
+          value={confirmPassword}
+          placeholder={t("signup.confirmPasswordPlaceholder")}
+          onChange={handleConfirmPasswordChange}
+          required
+          error={!!confirmPasswordError}
+          //helperText={confirmPasswordError}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label={t("signup.togglePasswordVisibility")}
+                  onClick={toggleConfirmPasswordVisibility}
+                  edge="end"
+                >
+                  {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+        {confirmPasswordError && (
+          <Typography 
+             variant="caption" 
+            sx={{ 
+              color: "error.main", 
+              display: "block",
+              mt: 0.5,
+            }}
+          >
+            {t("signup.error.passwordMismatch")}
+          </Typography>
+        )}
+
+        {/* old password field without strength checker */}
+        {/* <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
           {t("signup.password")}
         </Typography>
         <TextField
@@ -248,10 +513,10 @@ const Signup = ({ onSelectTab }: SignupProps) => {
               </InputAdornment>
             ),
           }}
-        />
+        /> */}
 
         {/* Terms and Conditions Checkbox */}
-        <Box sx={{ display: 'flex', alignItems: 'center',}}>
+        <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
           <Checkbox
             checked={termsAccepted}
             onChange={(e) => setTermsAccepted(e.target.checked)}
