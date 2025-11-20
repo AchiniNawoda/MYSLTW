@@ -118,13 +118,13 @@ const Promotion: React.FC<PromotionProps> = ({ telephoneNo }) => {
       )}
 
       {error && (
-        <Typography variant="body1" color="error">
+        <Typography variant="body1" color="error" sx={{ fontSize: "1rem", mt: 1 }}>
           {error}
         </Typography>
       )}
 
       {!loading && !error && promotions.length === 0 && (
-        <Typography variant="body2" color="textSecondary" sx={{ fontSize: "1rem", mt: 2 }}>
+        <Typography variant="body2" color="textSecondary" sx={{ fontSize: "0.8rem", mt: 2 }}>
           {t("no_promotions")}
         </Typography>
       )}

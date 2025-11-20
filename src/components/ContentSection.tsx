@@ -260,7 +260,7 @@ const ContentSection = () => {
         )}
         {selectedLeftMenuItem === "My Profile" && <UserProfile />}
         {selectedLeftMenuItem === "Manage Connections" && <PhoneNumberList />}
-        {selectedLeftMenuItem === "Notifications" && <NotificationsComponent />}
+        {selectedLeftMenuItem === "Notifications" && <NotificationsComponent telephoneNo={selectedTelephone}/>}
         
       </Box>
     </Box>

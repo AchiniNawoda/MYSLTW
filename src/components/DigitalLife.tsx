@@ -95,12 +95,12 @@ const DigitalLife: React.FC = () => {
       }}
     >
       <Typography
-  variant="body2"
-  align="center"
-  sx={{ fontSize: "24px", fontWeight: "bold", mb: 0.3 }}
->
-  {t("Digital Life")}
-</Typography>
+        variant="body2"
+        align="center"
+        sx={{ fontSize: "24px", fontWeight: "bold", mb: 0.3 }}
+      >
+        {t("Digital Life")}
+      </Typography>
 
       <Box
         sx={{

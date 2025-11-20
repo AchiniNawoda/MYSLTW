@@ -22,6 +22,8 @@ import { AccountDetails } from "../types/types";
 import MySLTMenu from "./ProfileMenuUIs/MySLTMenu";
 import { MdNotifications } from 'react-icons/md';
 import { useTranslation } from "react-i18next";
+import checkOfferAvailability from "../services/postpaid/checkOfferAvailability";
+import { use } from "i18next";
 
 
 const CustomAppBar = () => {
@@ -35,6 +37,8 @@ const CustomAppBar = () => {
   const [accounts, setAccounts] = useState<AccountDetails[]>([]);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [userName, setUserName] = useState("User");
+
+  const [promotionCount, setPromotionCount] = useState(0); // State for promotion count
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -72,6 +76,30 @@ const CustomAppBar = () => {
     };
     fetchData();
   }, []);
+  
+  // Notification count fetch
+
+  const selectedTelephone = useStore((state) => state.selectedTelephone);
+
+  useEffect(() => {
+    const fetchPromotionCount = async () => {
+      if (!selectedTelephone) return;
+
+      try {
+        const offerData = await checkOfferAvailability(selectedTelephone);
+
+        if (Array.isArray(offerData)) {
+          setPromotionCount(offerData.length);
+        } else {
+          setPromotionCount(0);
+        }
+      } catch (error) {
+        console.error("Failed to fetch promotion count:", error);
+        setPromotionCount(0);
+      }
+    };
+    fetchPromotionCount();
+  }, [selectedTelephone]);
 
   const open = Boolean(anchorEl);
 
@@ -83,8 +111,12 @@ const CustomAppBar = () => {
     return t("greeting.evening");
   };
 
-  // Notification count (can be dynamic)
-  const notificationCount = 3;
+  // Notification count
+  const notificationCount = promotionCount;
+
+  // Debug logs remove after verification
+  console.log("Promotion Count:", promotionCount);        // Debug log for promotion count
+  console.log("Selected Telephone:", selectedTelephone);  // Debug log for selected telephone
 
   return (
     <AppBar

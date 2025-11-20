@@ -12,19 +12,24 @@ import {
 import { useEffect, useState } from "react";
 import { textFieldStyles } from "./LogIn";
 import { MuiOtpInput } from "mui-one-time-password-input";
+import sendOTPRequest from "../../services/changePassword/sendOTPRequest";
 import verifyOTP from "../../services/changePassword/verifyOTP";
 import useStore from "../../services/useAppStore";
+import { useTranslation } from "react-i18next";
 
 interface OTPProps {
   onSelectTab: (tab: string) => void;
 }
 
 const OTPPage = ({ onSelectTab }: OTPProps) => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [newPassword, setNewPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [otp, setOtp] = useState("");
   const { otpState } = useStore();
+
+  const [isResending, setIsResending] = useState(false);
 
   const [otpVerified, setOtpVerified] = useState(false);
   const [attemptsLeft, setAttemptsLeft] = useState(3);
@@ -54,6 +59,25 @@ const OTPPage = ({ onSelectTab }: OTPProps) => {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
+  // Password strength checker
+  const getPasswordStrength = (pwd: string) => {
+    const checks = {
+      length: pwd.length >= 8,
+      uppercase: /[A-Z]/.test(pwd),
+      lowercase: /[a-z]/.test(pwd),
+      number: /[0-9]/.test(pwd),
+      special: /[!@#$%^&*()\-+=_]/.test(pwd),
+    };
+    
+    const passedCount = Object.values(checks).filter(Boolean).length;
+    return { checks, passedCount, total: 5 };
+  };
+
+  const validatePassword = (pwd: string): boolean => {
+    const { checks } = getPasswordStrength(pwd);
+    return Object.values(checks).every(Boolean);
+  };
+
   const handleSubmit = async () => {
     if (otp.length !== 6) {
       setError("Please enter a valid 6-digit OTP");
@@ -70,8 +94,15 @@ const OTPPage = ({ onSelectTab }: OTPProps) => {
       return;
     }
 
-    if (newPassword.length < 6) {
-      setError("Password must be at least 6 characters long");
+    // if (newPassword.length < 6) {
+    //   setError("Password must be at least 6 characters long");
+    //   return;
+    // }
+
+    // Validate password strength
+    if (!validatePassword(newPassword)) {
+      setError(t("signup.error.passwordRequirements") || "Password does not meet all requirements");
+      setLoading(false);
       return;
     }
 
@@ -108,28 +139,41 @@ const OTPPage = ({ onSelectTab }: OTPProps) => {
   };
 
   const handleResendOtp = async () => {
-  setError("");
-  setAttemptsLeft(3);   // reset attempts
-  setTimeLeft(120);     // reset timer
-  setOtp("");           // clear OTP field
+    setError("");         // clear previous errors
+    setAttemptsLeft(3);   // reset attempts
+    setTimeLeft(120);     // reset timer
+    setOtp("");           // clear OTP field
+    setIsResending(true); // set resend state
 
-  try {
-    // Example API call to resend OTP
-    const userId = otpState?.userName;
-    if (!userId) {
-      setError("No user ID found. Please try again.");
+    const userName = otpState?.userName;
+    const userType = otpState?.userType;
+
+    if (!userName || !userType) {
+      setError("User information is missing. Cannot resend OTP.");
+      setIsResending(false);
       return;
     }
 
-    // You need to create resendOTP service similar to verifyOTP
-    // await resendOTP(userId);
+    try {
+      const response = await sendOTPRequest(userName, userType);
 
-    console.log("OTP resent successfully");
-  } catch (error) {
-    setError("Failed to resend OTP. Please try again.");
-    console.error(error);
-  }
-};
+      if (response != null && response.isSuccess) {
+        //setSuccessMessage(t("otp.resent_successfully") || "OTP has been resent successfully.");
+        console.log("OTP has been resent successfully.");
+      } else {
+        setError(response?.errorMessage || "Failed to resend OTP. Please try again.");
+        console.error("Failed to resend OTP", response);
+      }
+
+      // console.log("OTP resent successfully");
+
+    } catch (error) {
+      setError("Failed to resend OTP. Please try again.");
+      console.error("Resend OTP error: ", error);
+    }
+
+    setIsResending(false); // reset resend state
+  };
 
 
 

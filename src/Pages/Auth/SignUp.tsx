@@ -302,280 +302,297 @@ const Signup = ({ onSelectTab }: SignupProps) => {
         {t("signup.title")}
       </Typography>
 
-      <form onSubmit={handleSubmit}>
-        {errorMessage && (
-          <Alert severity="error" sx={{ mb: 2, width: "100%" }}>
-            {errorMessage}
-          </Alert>
-          // <Typography color="error" variant="body2">
-          //   {errorMessage}
-          // </Typography>
-        )}
+      <Box
+        sx={{
+          width: { xs: "90%", sm: "65%" },
+          //maxWidth: { xs: "100%", sm: "80%" },
+          mx: "auto",
+        }}
+      >
+        <form onSubmit={handleSubmit}>
+          {errorMessage && (
+            <Alert 
+              severity="error" 
+              sx={{ 
+                mb: 2,
+                whiteSpace: "pre-line",
+                width: "100%",
+                maxWidth: { xs: "90%", sm: "90%" },
+                alignSelf: "center",
+              }}
+            >
+              {errorMessage}
+            </Alert>
+            // <Typography color="error" variant="body2">
+            //   {errorMessage}
+            // </Typography>
+          )}
 
-        <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
-          {t("signup.emailOrMobile")}
-        </Typography>
-        <TextField
-          sx={textFieldStyles}
-          fullWidth
-          variant="outlined"
-          margin="normal"
-          value={userID}
-          placeholder={t("signup.emailOrMobilePlaceholder")}
-          onChange={(e) => setUserID(e.target.value.trim())}
-          required
-        />
-
-        <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
-          {t("signup.name")}
-        </Typography>
-        <TextField
-          sx={textFieldStyles}
-          fullWidth
-          variant="outlined"
-          margin="normal"
-          value={name}
-          placeholder={t("signup.namePlaceholder")}
-          onChange={(e) => setName(e.target.value.trim())}
-          required
-        />
-
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
-            {t("signup.password")}
+            {t("signup.emailOrMobile")}
           </Typography>
-          {passwordTouched && password && (
-            <Tooltip
-              title={getPasswordTooltipContent()}
-              arrow
-              placement="right"
-              componentsProps={{
-                tooltip: {
-                  sx: {
-                    bgcolor: "white",
-                    color: 'rgba(0, 0, 0, 0.87)',
-                    boxShadow: '0px 2px 8px rgba(0,0,0,0.15)',
-                    border: '1px solid #e0e0e0',
-                    '& .MuiTooltip-arrow': {
-                      color: 'white',
-                      '&::before': {
-                        border: '1px solid #e0e0e0',
+          <TextField
+            sx={textFieldStyles}
+            fullWidth
+            variant="outlined"
+            margin="normal"
+            value={userID}
+            placeholder={t("signup.emailOrMobilePlaceholder")}
+            onChange={(e) => setUserID(e.target.value.trim())}
+            required
+          />
+
+          <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+            {t("signup.name")}
+          </Typography>
+          <TextField
+            sx={textFieldStyles}
+            fullWidth
+            variant="outlined"
+            margin="normal"
+            value={name}
+            placeholder={t("signup.namePlaceholder")}
+            onChange={(e) => setName(e.target.value.trim())}
+            required
+          />
+
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+              {t("signup.password")}
+            </Typography>
+            {passwordTouched && password && (
+              <Tooltip
+                title={getPasswordTooltipContent()}
+                arrow
+                placement="right"
+                componentsProps={{
+                  tooltip: {
+                    sx: {
+                      bgcolor: "white",
+                      color: 'rgba(0, 0, 0, 0.87)',
+                      boxShadow: '0px 2px 8px rgba(0,0,0,0.15)',
+                      border: '1px solid #e0e0e0',
+                      '& .MuiTooltip-arrow': {
+                        color: 'white',
+                        '&::before': {
+                          border: '1px solid #e0e0e0',
+                        },
                       },
                     },
                   },
-                },
-              }}
-              >
-                <Box sx={{ 
-                  display: "flex", 
-                  alignItems: "center", 
-                  gap: 0.5,
-                  cursor: "pointer",
-                }}>
-                  <Typography 
-                    variant="caption" 
-                    sx={{ 
-                      color: isPasswordValid ? "#4caf50" : "#f44336",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {passwordStrength.passedCount}/{passwordStrength.total}
-                  </Typography>
-                  {isPasswordValid ? (
-                    <CheckCircleIcon sx={{ fontSize: 16, color: "#4caf50" }} />
-                  ) : (
-                    <CancelIcon sx={{ fontSize: 16, color: "#f44336" }} />
-                  )}
-                </Box>
-            </Tooltip>
-          )}
-        </Box>
-        <TextField
-          fullWidth
-          sx={textFieldStyles}
-          type={showPassword ? "text" : "password"}
-          variant="outlined"
-          margin="normal"
-          value={password}
-          placeholder={t("signup.passwordPlaceholder")}
-          onChange={handlePasswordChange}
-          required
-          error={passwordTouched && password.length > 0 && !isPasswordValid}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label={t("signup.togglePasswordVisibility")}
-                  onClick={togglePasswordVisibility}
-                  edge="end"
+                }}
                 >
-                  {showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-
-        <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
-          {t("signup.confirmPassword")}
-        </Typography>
-        <TextField
-          fullWidth
-          sx={textFieldStyles}
-          type={showConfirmPassword ? "text" : "password"}
-          variant="outlined"
-          margin="normal"
-          value={confirmPassword}
-          placeholder={t("signup.confirmPasswordPlaceholder")}
-          onChange={handleConfirmPasswordChange}
-          required
-          error={!!confirmPasswordError}
-          //helperText={confirmPasswordError}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label={t("signup.togglePasswordVisibility")}
-                  onClick={toggleConfirmPasswordVisibility}
-                  edge="end"
-                >
-                  {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-        {confirmPasswordError && (
-          <Typography 
-             variant="caption" 
-            sx={{ 
-              color: "error.main", 
-              display: "block",
-              mt: 0.5,
-            }}
-          >
-            {t("signup.error.passwordMismatch")}
-          </Typography>
-        )}
-
-        {/* old password field without strength checker */}
-        {/* <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
-          {t("signup.password")}
-        </Typography>
-        <TextField
-          fullWidth
-          sx={textFieldStyles}
-          type={showPassword ? "text" : "password"}
-          variant="outlined"
-          margin="normal"
-          value={password}
-          placeholder={t("signup.passwordPlaceholder")}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label={t("signup.togglePasswordVisibility")}
-                  onClick={togglePasswordVisibility}
-                  edge="end"
-                >
-                  {showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
-
-        <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
-          {t("signup.confirmPassword")}
-        </Typography>
-        <TextField
-          fullWidth
-          sx={textFieldStyles}
-          type={showConfirmPassword ? "text" : "password"}
-          variant="outlined"
-          margin="normal"
-          value={confirmPassword}
-          placeholder={t("signup.confirmPasswordPlaceholder")}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label={t("signup.togglePasswordVisibility")}
-                  onClick={toggleConfirmPasswordVisibility}
-                  edge="end"
-                >
-                  {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        /> */}
-
-        {/* Terms and Conditions Checkbox */}
-        <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
-          <Checkbox
-            checked={termsAccepted}
-            onChange={(e) => setTermsAccepted(e.target.checked)}
-            name="terms"
-            sx={{ 
-              color: termsAccepted ? "#0F3B7A" : "#ccc",
-              boxSizing: "border-box",
-              '&.Mui-checked': {
-                color: "#0F3B7A",
-              },
-            }}
+                  <Box sx={{ 
+                    display: "flex", 
+                    alignItems: "center", 
+                    gap: 0.5,
+                    cursor: "pointer",
+                  }}>
+                    <Typography 
+                      variant="caption" 
+                      sx={{ 
+                        color: isPasswordValid ? "#4caf50" : "#f44336",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {passwordStrength.passedCount}/{passwordStrength.total}
+                    </Typography>
+                    {isPasswordValid ? (
+                      <CheckCircleIcon sx={{ fontSize: 16, color: "#4caf50" }} />
+                    ) : (
+                      <CancelIcon sx={{ fontSize: 16, color: "#f44336" }} />
+                    )}
+                  </Box>
+              </Tooltip>
+            )}
+          </Box>
+          <TextField
+            fullWidth
+            sx={textFieldStyles}
+            type={showPassword ? "text" : "password"}
+            variant="outlined"
+            margin="normal"
+            value={password}
+            placeholder={t("signup.passwordPlaceholder")}
+            onChange={handlePasswordChange}
             required
+            error={passwordTouched && password.length > 0 && !isPasswordValid}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t("signup.togglePasswordVisibility")}
+                    onClick={togglePasswordVisibility}
+                    edge="end"
+                  >
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
           />
-          <Typography variant="body2" sx={{ color: "#0F3B7A", fontSize: "0.875rem",}}>
-            {t("signup.acceptTerms.prefix")}{" "}
-            <Typography
-              onClick={handleOpenTermsDialog}
-              component={"span"}
-              variant="body2"
+
+          <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+            {t("signup.confirmPassword")}
+          </Typography>
+          <TextField
+            fullWidth
+            sx={textFieldStyles}
+            type={showConfirmPassword ? "text" : "password"}
+            variant="outlined"
+            margin="normal"
+            value={confirmPassword}
+            placeholder={t("signup.confirmPasswordPlaceholder")}
+            onChange={handleConfirmPasswordChange}
+            required
+            error={!!confirmPasswordError}
+            //helperText={confirmPasswordError}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t("signup.togglePasswordVisibility")}
+                    onClick={toggleConfirmPasswordVisibility}
+                    edge="end"
+                  >
+                    {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+          {confirmPasswordError && (
+            <Typography 
+              variant="caption" 
               sx={{ 
-                color: "#0F3B7A", 
-                //textDecoration: "underline", 
-                cursor: "pointer",
-                fontWeight: "bold",
-                ":hover": { textDecoration: "underline",},
+                color: "error.main", 
+                display: "block",
+                mt: 0.5,
               }}
             >
-              {t("signup.acceptTerms.conditions")}
-            </Typography>
-          </Typography>
-        </Box>
-
-
-        <Button
-          variant="contained"
-          type="submit"
-          sx={{
-            mt: "20px",
-            width: "100%",
-            backgroundColor: "primary",
-            padding: "12px",
-            borderRadius: "50px",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            textTransform: "capitalize",
-            "&:hover": {
-              backgroundColor: "#003b5c",
-            },
-          }}
-        >
-          {loading ? (
-            <CircularProgress color="inherit" size={20} />
-          ) : (
-            <Typography variant="body2" sx={{ color: "#FFFFFF" }}>
-              {t("signup.signupButton")}
+              {t("signup.error.passwordMismatch")}
             </Typography>
           )}
-        </Button>
-      </form>
+
+          {/* old password field without strength checker */}
+          {/* <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+            {t("signup.password")}
+          </Typography>
+          <TextField
+            fullWidth
+            sx={textFieldStyles}
+            type={showPassword ? "text" : "password"}
+            variant="outlined"
+            margin="normal"
+            value={password}
+            placeholder={t("signup.passwordPlaceholder")}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t("signup.togglePasswordVisibility")}
+                    onClick={togglePasswordVisibility}
+                    edge="end"
+                  >
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+
+          <Typography variant="body2" sx={{ color: "#0F3B7A" }}>
+            {t("signup.confirmPassword")}
+          </Typography>
+          <TextField
+            fullWidth
+            sx={textFieldStyles}
+            type={showConfirmPassword ? "text" : "password"}
+            variant="outlined"
+            margin="normal"
+            value={confirmPassword}
+            placeholder={t("signup.confirmPasswordPlaceholder")}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label={t("signup.togglePasswordVisibility")}
+                    onClick={toggleConfirmPasswordVisibility}
+                    edge="end"
+                  >
+                    {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          /> */}
+
+          {/* Terms and Conditions Checkbox */}
+          <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+            <Checkbox
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
+              name="terms"
+              sx={{ 
+                color: termsAccepted ? "#0F3B7A" : "#ccc",
+                boxSizing: "border-box",
+                '&.Mui-checked': {
+                  color: "#0F3B7A",
+                },
+              }}
+              required
+            />
+            <Typography variant="body2" sx={{ color: "#0F3B7A", fontSize: "0.875rem",}}>
+              {t("signup.acceptTerms.prefix")}{" "}
+              <Typography
+                onClick={handleOpenTermsDialog}
+                component={"span"}
+                variant="body2"
+                sx={{ 
+                  color: "#0F3B7A", 
+                  //textDecoration: "underline", 
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                  ":hover": { textDecoration: "underline",},
+                }}
+              >
+                {t("signup.acceptTerms.conditions")}
+              </Typography>
+            </Typography>
+          </Box>
+
+
+          <Button
+            variant="contained"
+            type="submit"
+            sx={{
+              mt: "20px",
+              width: "100%",
+              backgroundColor: "primary",
+              padding: "12px",
+              borderRadius: "50px",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              textTransform: "capitalize",
+              "&:hover": {
+                backgroundColor: "#003b5c",
+              },
+            }}
+          >
+            {loading ? (
+              <CircularProgress color="inherit" size={20} />
+            ) : (
+              <Typography variant="body2" sx={{ color: "#FFFFFF" }}>
+                {t("signup.signupButton")}
+              </Typography>
+            )}
+          </Button>
+        </form>
+      </Box>
 
       <TermsDialog
         open={termsDialogOpen}

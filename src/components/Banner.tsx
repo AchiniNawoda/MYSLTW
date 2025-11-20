@@ -52,12 +52,14 @@ const Banner = () => {
         padding: 0,
         borderRadius: 2,
         position: "relative",
-        height: getBannerHeight(),
+        //height: getBannerHeight(),
         boxShadow: "0px 3px 3px #0000004A",
         overflow: "hidden",
         mt: 0,
         backgroundColor: "#f0f0f0",
         width: "100%",
+        //aspectRatio: isMobile ? "16/9" : isTablet ? "16/7" : "16/5",
+        aspectRatio: "16/9",
       }}
     >
       {bannerData.length > 0 && (
