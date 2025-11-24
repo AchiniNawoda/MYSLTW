@@ -128,7 +128,7 @@ const DigitalLife: React.FC = () => {
               key={service.id}
               sx={{
                 width: 320,
-                height: 200,
+                //height: 200,
                 backgroundColor: "#0056A2",
                 borderRadius: "10px",
                 boxShadow: 3,
@@ -145,7 +145,8 @@ const DigitalLife: React.FC = () => {
                   padding: 1,
                   borderRadius: "10px",
                   position: "relative",
-                  height: "125px",
+                  //height: "125px",
+                  aspectRatio: "16/8",
                   width: "auto",
                   boxShadow: "0px 3px 3px #0000004A",
                   overflow: "hidden",

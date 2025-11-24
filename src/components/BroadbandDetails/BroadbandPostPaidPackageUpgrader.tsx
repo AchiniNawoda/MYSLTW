@@ -174,11 +174,11 @@ const BroadbandPostPaidPackageUpgrader: React.FC = () => {
           mb: 1,
           boxSizing: "border-box",
           flexDirection: { xs: "column", lg: "row" }, // Responsive for small screens
-          gap: { xs: 1, lg: 0 },
+          gap: { xs: 1, md: 2 },
         }}
       >
-        <Box>
-          <Box display="flex" alignItems="center">
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1, alignItems: { xs: "center", lg: "flex-start" } }}>
+          <Box sx={{ display: "flex", flexDirection: "row"}}>
             <CustomArrowIcon />
             <Typography
               variant="body2"
@@ -188,9 +188,9 @@ const BroadbandPostPaidPackageUpgrader: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ flexDirection: "column" }}>
+          <Box sx={{width: "100%"}}>
             <Typography
-              variant="h6"
+              //variant="h6"
               fontWeight="bold"
               color="white"
               sx={{
@@ -209,7 +209,7 @@ const BroadbandPostPaidPackageUpgrader: React.FC = () => {
           <Typography
             variant="body2"
             sx={{
-              fontSize: {xs: "1.2rem", md:"1.4rem"}, // Responsive font size
+              fontSize: {xs: "1rem", md:"1.2rem"}, // Responsive font size
               fontWeight: "bold",
               color: "#0056A2",
               mr: 1,
@@ -219,7 +219,7 @@ const BroadbandPostPaidPackageUpgrader: React.FC = () => {
           </Typography>
           <Typography
             variant="body2"
-            sx={{ color: "#0056A2", fontSize: {xs: "0.85rem", md:"1rem"} }}
+            sx={{ color: "#0056A2", fontSize: {xs: "0.8rem", md:"0.9rem"} }}
           >
             ({t("package.perMonth")})
           </Typography>
