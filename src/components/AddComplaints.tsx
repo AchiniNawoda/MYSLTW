@@ -81,30 +81,34 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#FFFFFF",
-        color: "#0056A2",
-        paddingY: 1,
-        paddingX: 3,
+        backgroundColor: "background.paper",
+        color: "primary.main",
+        py: { xs: 2, md: 4 },
+        px: { xs: 2, md: 4 },
         borderRadius: "10px",
         boxShadow: "0px 3px 3px #0000004A",
-        height: "450px",
+        minHeight: "450px",
+        height: "auto",
+        width: "100%",
+        maxWidth: "100%",
+        boxSizing: "border-box",
       }}
     >
       {/* Header */}
       <Typography
         variant="h6"
         align="center"
-        sx={{ fontWeight: "bold", color: "#0056A2", mb: 2 }}
+        sx={{ fontWeight: "bold", color: "primary.main", mb: 3 }}
       >
-         {t("addComplaints.title")} 
+        {t("addComplaints.title")}
       </Typography>
 
       {/* Form Content */}
-      <Grid container spacing={2}>
+      <Grid container spacing={3} sx={{ width: "100%", flexGrow: 1 }}>
         {/* Left Column */}
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={6}>
           <Box mb={2}>
-            <Typography fontWeight="bold" color="#0056A2" mb={1}>
+            <Typography fontWeight="bold" color="primary.main" mb={1}>
               {t("addComplaints.serviceType")}
             </Typography>
             <TextField
@@ -124,7 +128,7 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
           </Box>
 
           <Box mb={2}>
-            <Typography fontWeight="bold" color="#0056A2" mb={1}>
+            <Typography fontWeight="bold" color="primary.main" mb={1}>
               {t("addComplaints.contactNumber")}
             </Typography>
             <TextField
@@ -138,7 +142,7 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
           </Box>
 
           <Box mb={2}>
-            <Typography fontWeight="bold" color="#0056A2" mb={1}>
+            <Typography fontWeight="bold" color="primary.main" mb={1}>
               {t("addComplaints.description")}
             </Typography>
             <TextField
@@ -154,58 +158,66 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
         </Grid>
 
         {/* Right Column */}
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={6} sx={{ display: "flex", flexDirection: "column" }}>
           <Card
             sx={{
-              height: "85%",
-              backgroundColor: "#F8FAFD",
-              padding: "16px",
+              flex: 1,
+              backgroundColor: "#F8FAFD", // Keeping as is, or could use a light grey from theme if available
+              p: 2,
               borderRadius: "12px",
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "300px",
             }}
           >
+            <Typography fontWeight="bold" color="primary.main" mb={1}>
+              {t("addComplaints.location")}
+            </Typography>
             <TextField
               fullWidth
               variant="outlined"
               size="small"
-              label={t("addComplaints.location")}
-              sx={textFieldStyle(40, 250)}
+              sx={{ ...textFieldStyle(), mb: 2 }}
             />
-            <iframe
-              title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126744.08449728298!2d79.81216954042364!3d6.927078400000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259404958c1f9%3A0x4fdf4c34fd426a0f!2sColombo!5e0!3m2!1sen!2slk!4v1699056801524!5m2!1sen!2slk"
-              style={{
-                border: 0,
-                width: "100%",
-                height: "80%",
-                borderRadius: "8px",
-              }}
-              allowFullScreen
-            ></iframe>
+            <Box sx={{ flexGrow: 1, width: "100%", minHeight: "200px", borderRadius: "8px", overflow: "hidden" }}>
+              <iframe
+                title="Google Maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126744.08449728298!2d79.81216954042364!3d6.927078400000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259404958c1f9%3A0x4fdf4c34fd426a0f!2sColombo!5e0!3m2!1sen!2slk!4v1699056801524!5m2!1sen!2slk"
+                style={{
+                  border: 0,
+                  width: "100%",
+                  height: "100%",
+                  minHeight: "200px",
+                }}
+                allowFullScreen
+              ></iframe>
+            </Box>
           </Card>
         </Grid>
       </Grid>
 
       {/* Submit Button */}
-      <Box sx={{ display: "flex", justifyContent: "center", mt: "-5px" }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4, mb: 1 }}>
         <Button
           variant="outlined"
           onClick={handleSubmit}
           sx={{
             display: "flex",
             gap: 2,
-            backgroundColor: "#FFFFFF",
-            color: "#0056A2",
-            border: "3px solid #0056A2",
+            backgroundColor: "background.paper",
+            color: "primary.main",
+            border: "3px solid",
+            borderColor: "primary.main",
             borderRadius: "12px",
             textTransform: "none",
-            px: 2,
+            px: 4,
             py: 1,
             minWidth: "175px",
             fontWeight: "bold",
             fontSize: "1rem",
             "&:hover": {
               backgroundColor: "#EAF2FB",
-              borderColor: "#0056A2",
+              borderColor: "primary.main",
             },
           }}
         >
@@ -218,7 +230,7 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
 
       {/* Dialog */}
       <Dialog open={isDialogOpen} onClose={handleDialogClose}>
-        <DialogTitle sx={{ textAlign: "center", color: isSuccess ? "green" : "red" }}>
+        <DialogTitle sx={{ textAlign: "center", color: isSuccess ? "green" : "error.main" }}>
           {isSuccess ? t("addComplaints.success") : t("addComplaints.error")}
         </DialogTitle>
         <DialogContent>
@@ -227,12 +239,12 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
               display: "flex",
               alignItems: "center",
               flexDirection: "column",
-              width: "400px",
-              height: "50px",
+              minWidth: "300px",
               textAlign: "center",
               fontWeight: "bold",
               fontSize: "14px",
-              color: "#0056A2",
+              color: "primary.main",
+              p: 2,
             }}
           >
             {dialogMessage}
@@ -243,12 +255,12 @@ const AddComplaints: React.FC<AddComplaintsProps> = ({ telephoneNo }) => {
                   : "https://i.gifer.com/Z16w.gif"
               }
               alt={isSuccess ? "Success" : "Failure"}
-              style={{ width: "100px", height: "30px", borderRadius: "10px", marginTop: 5 }}
+              style={{ width: "100px", height: "30px", borderRadius: "10px", marginTop: 20 }}
             />
           </DialogContentText>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleDialogClose} autoFocus>
+        <DialogActions sx={{ justifyContent: "center", pb: 2 }}>
+          <Button onClick={handleDialogClose} autoFocus variant="contained" sx={{ bgcolor: "primary.main" }}>
             {t("addComplaints.ok")}
           </Button>
         </DialogActions>
