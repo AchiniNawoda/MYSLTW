@@ -29,6 +29,11 @@ export const registerUser = async (
 
     // Send the request using axios
     const response = await axios.post<OtpResponse>(url, payload, {
+      params:{
+        username,
+        password,
+        confirmPassword,
+      },
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
